@@ -1,0 +1,104 @@
+Summary for ./fernflower-fix-deobf.jar
+Decompiled with CFR 0.151
+
+
+de.fernflower.modules.decompiler.InlineSingleBlockHelper
+----------------------------
+
+inlineSingleBlocksRec(de.fernflower.modules.decompiler.stats.Statement )
+  Unable to fully structure code
+
+
+de.fernflower.modules.decompiler.ExprProcessor
+----------------------------
+
+getCastedExprent(de.fernflower.modules.decompiler.exps.Exprent de.fernflower.struct.gen.VarType java.lang.StringBuilder int boolean boolean )
+  Unable to fully structure code
+
+
+de.fernflower.main.rels.NestedMemberAccess
+----------------------------
+
+sameTree(de.fernflower.main.ClassesProcessor$ClassNode de.fernflower.main.ClassesProcessor$ClassNode )
+  Unable to fully structure code
+
+
+de.fernflower.modules.decompiler.SimplifyExprentsHelper
+----------------------------
+
+buildIff(de.fernflower.modules.decompiler.stats.Statement java.util.HashSet de.fernflower.modules.decompiler.sforms.SSAConstructorSparseEx )
+  Could not resolve type clashes
+  Unable to fully structure code
+simplifyStackVarsExprents(java.util.List )
+  Unable to fully structure code
+
+
+de.fernflower.modules.decompiler.MergeHelper
+----------------------------
+
+matchWhile(de.fernflower.modules.decompiler.stats.Statement )
+  Unable to fully structure code
+
+
+de.fernflower.main.rels.NestedClassProcessor
+----------------------------
+
+processClass(de.fernflower.main.ClassesProcessor$ClassNode de.fernflower.main.ClassesProcessor$ClassNode )
+  Could not resolve type clashes
+
+
+de.fernflower.modules.decompiler.ConcatenationHelper
+----------------------------
+
+contractStringConcat(de.fernflower.modules.decompiler.exps.Exprent )
+  Unable to fully structure code
+
+
+de.fernflower.struct.StructMethod
+----------------------------
+
+parseBytecode(de.fernflower.util.DataInputFullStream int de.fernflower.struct.consts.ConstantPool )
+  Handled duff style switch with additional control
+
+
+de.fernflower.struct.gen.VarType
+----------------------------
+
+setStackSize(int )
+  Unable to fully structure code
+
+
+de.fernflower.modules.decompiler.IfHelper
+----------------------------
+
+mergeIfs(de.fernflower.modules.decompiler.stats.Statement java.util.HashSet )
+  Unable to fully structure code
+  Could not resolve type clashes
+
+
+de.fernflower.main.EnumProcessor
+----------------------------
+
+clearEnum(de.fernflower.main.rels.ClassWrapper )
+  Unable to fully structure code
+
+
+de.fernflower.modules.decompiler.decompose.GenericDominatorEngine
+----------------------------
+
+orderNodes()
+  Handled impossible loop by duplicating code
+
+
+de.fernflower.modules.code.DeadCodeHelper
+----------------------------
+
+incorporateValueReturns(de.fernflower.code.cfg.ControlFlowGraph )
+  Unable to fully structure code
+
+
+de.fernflower.struct.gen.generics.GenericType
+----------------------------
+
+parseArgumentsList(java.lang.String de.fernflower.struct.gen.generics.GenericType )
+  Unable to fully structure code

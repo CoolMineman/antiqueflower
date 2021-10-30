@@ -1,0 +1,1790 @@
+v1	official	named
+CLASS	bx	de/fernflower/bx
+CLASS	t	de/fernflower/t
+CLASS	A	de/fernflower/code/optinstructions/INVOKEINTERFACE
+CLASS	B	de/fernflower/modules/decompiler/PrimitiveExprsList
+METHOD	B	()LB;	a	copyStack
+METHOD	B	()Ljava/util/List;	b	getLstExprents
+METHOD	B	()Lbs;	c	getStack
+FIELD	B	Ljava/util/List;	a	lstExprents
+FIELD	B	Lbs;	b	stack
+CLASS	C	de/fernflower/main/rels/NestedClassProcessor
+METHOD	C	(LaJ;LQ;)Z	a	searchForClass
+METHOD	C	(LaK;LaK;)V	a	processClass
+METHOD	C	(LbW;LcX;Lq;I)Ljava/lang/String;	a	getEnclosingVarField
+METHOD	C	(LcX;LaK;)V	a	setLocalClassDefinition
+METHOD	C	(Lca;LQ;Ljava/util/HashSet;)Lca;	a	getDefStatement
+METHOD	C	(Lca;Ljava/util/HashSet;)Lca;	a	findFirstBlock
+METHOD	C	(Ljava/util/List;Ljava/util/List;Z)V	a	mergeListSignatures
+METHOD	C	(Lv;)Ljava/util/HashMap;	a	getMaskLocalVars
+METHOD	C	(LaK;LaK;)V	b	checkNotFoundClasses
+METHOD	C	(LaK;LaK;)Z	c	insertNestedClass
+METHOD	C	(LaK;LaK;)V	d	insertLocalVars
+CLASS	D	de/fernflower/code/optinstructions/LDC_W
+CLASS	E	de/fernflower/modules/decompiler/stats/SynchronizedStatement
+METHOD	E	()Lca;	a	getSimpleCopy
+METHOD	E	(I)Ljava/lang/String;	a	toJava
+METHOD	E	(LaJ;LaJ;)V	a	replaceExprent
+METHOD	E	(Lca;Lca;)V	a	replaceStatement
+METHOD	E	()V	b	initSimpleCopy
+METHOD	E	()Ljava/util/List;	d	getSequentialObjects
+METHOD	E	()V	e	removeExc
+METHOD	E	()V	e_	initExprents
+METHOD	E	()Lca;	f	getBody
+METHOD	E	()Ljava/util/List;	g	getHeadexprentList
+FIELD	E	Lca;	a	body
+FIELD	E	Ljava/util/List;	b	headexprent
+CLASS	F	de/fernflower/main/rels/MethodProcessorThread
+METHOD	F	()LS;	a	getRoot
+METHOD	F	(Lbn;Lce;)LS;	a	codeToJava
+METHOD	F	()Ljava/lang/Throwable;	b	getError
+FIELD	F	Lbn;	a	method
+FIELD	F	Lce;	b	varproc
+FIELD	F	LaD;	c	parentContext
+FIELD	F	LS;	d	root
+FIELD	F	Ljava/lang/Throwable;	e	error
+CLASS	G	de/fernflower/modules/decompiler/stats/IfStatement
+METHOD	G	()Lca;	a	getSimpleCopy
+METHOD	G	(I)Ljava/lang/String;	a	toJava
+METHOD	G	(LaJ;LaJ;)V	a	replaceExprent
+METHOD	G	(LcV;)V	a	setElseEdge
+METHOD	G	(Lca;)Lca;	a	isHead
+METHOD	G	(Lca;Lca;)V	a	replaceStatement
+METHOD	G	(Z)V	a	setNegated
+METHOD	G	()V	b	initSimpleCopy
+METHOD	G	(LcV;)V	b	setIfEdge
+METHOD	G	(Lca;)V	b	setElsestat
+METHOD	G	(Lca;)V	c	setIfstat
+METHOD	G	()Ljava/util/List;	d	getSequentialObjects
+METHOD	G	()Lca;	e	getElsestat
+METHOD	G	()V	e_	initExprents
+METHOD	G	()Lca;	f	getIfstat
+METHOD	G	()Z	g	isNegated
+METHOD	G	()Ljava/util/List;	h	getHeadexprentList
+METHOD	G	()Lo;	i	getHeadexprent
+METHOD	G	()LcV;	j	getIfEdge
+METHOD	G	()LcV;	k	getElseEdge
+FIELD	G	I	a	IFTYPE_IFELSE
+FIELD	G	I	b	iftype
+FIELD	G	Lca;	k	ifstat
+FIELD	G	Lca;	l	elsestat
+FIELD	G	LcV;	m	ifedge
+FIELD	G	LcV;	n	elseedge
+FIELD	G	Z	o	negated
+FIELD	G	Z	p	iffflag
+FIELD	G	Ljava/util/List;	q	headexprent
+CLASS	H	de/fernflower/modules/decompiler/FinallyProcessor$1BlockStackEntry
+FIELD	H	LbT;	a	blockCatch
+FIELD	H	LbT;	b	blockSample
+FIELD	H	Ljava/util/List;	c	lstStoreVars
+CLASS	I	de/fernflower/code/optinstructions/SIPUSH
+CLASS	J	de/fernflower/modules/decompiler/deobfuscator/IrreducibleCFGDeobfuscator
+METHOD	J	(Lca;)Z	a	isStatementIrreducible
+METHOD	J	(Lca;Lca;Ljava/util/HashMap;)Lca;	a	copyStatement
+METHOD	J	(Lca;)Z	b	splitIrreducibleNode
+METHOD	J	(Lca;)I	c	getStatementSize
+METHOD	J	(Lca;)V	d	initCopiedStatement
+CLASS	K	de/fernflower/main/ClassReference14Processor$1
+METHOD	K	(LaJ;)I	a	processExprent
+FIELD	K	Lx;	a	this$0
+FIELD	K	Ljava/util/HashMap;	b	val$mapClassMeths
+FIELD	K	Ljava/util/HashSet;	c	val$setFound
+CLASS	L	de/fernflower/code/optinstructions/INVOKEVIRTUAL
+CLASS	M	de/fernflower/code/optinstructions/LLOAD
+CLASS	N	de/fernflower/modules/decompiler/sforms/FlattenStatementsHelper$1StatementStackEntry
+FIELD	N	Lca;	a	statement
+FIELD	N	Ljava/util/LinkedList;	b	stackFinally
+FIELD	N	Ljava/util/List;	c	tailExprents
+FIELD	N	I	d	statementIndex
+FIELD	N	I	e	edgeIndex
+FIELD	N	Ljava/util/List;	f	succEdges
+CLASS	O	de/fernflower/code/FullInstructionSequence
+CLASS	P	de/fernflower/code/ExceptionHandler
+FIELD	P	I	a	from
+FIELD	P	I	b	to
+FIELD	P	I	c	handler
+FIELD	P	I	d	from_instr
+FIELD	P	I	e	to_instr
+FIELD	P	I	f	handler_instr
+FIELD	P	Ljava/lang/String;	g	exceptionClass
+CLASS	Q	de/fernflower/struct/gen/VarType
+METHOD	Q	()V	a	decArrayDim
+METHOD	Q	(I)LQ;	a	getMinTypeInFamily
+METHOD	Q	(LQ;)Z	a	isSuperset
+METHOD	Q	(LQ;LQ;)LQ;	a	getCommonMinType
+METHOD	Q	(Ljava/lang/String;Z)V	a	parseTypeString
+METHOD	Q	()LQ;	b	copy
+METHOD	Q	(I)V	b	setStackSize
+METHOD	Q	(LQ;)Z	b	isStrictSuperset
+METHOD	Q	(LQ;LQ;)LQ;	b	getCommonSupertype
+METHOD	Q	()V	c	setFamily
+FIELD	Q	LQ;	a	VARTYPE_UNKNOWN
+FIELD	Q	LQ;	b	VARTYPE_INT
+FIELD	Q	LQ;	c	VARTYPE_FLOAT
+FIELD	Q	LQ;	d	VARTYPE_LONG
+FIELD	Q	LQ;	e	VARTYPE_DOUBLE
+FIELD	Q	LQ;	f	VARTYPE_BYTE
+FIELD	Q	LQ;	g	VARTYPE_CHAR
+FIELD	Q	LQ;	h	VARTYPE_SHORT
+FIELD	Q	LQ;	i	VARTYPE_BOOLEAN
+FIELD	Q	LQ;	j	VARTYPE_BYTECHAR
+FIELD	Q	LQ;	k	VARTYPE_SHORTCHAR
+FIELD	Q	LQ;	l	VARTYPE_NULL
+FIELD	Q	LQ;	m	VARTYPE_STRING
+FIELD	Q	LQ;	n	VARTYPE_CLASS
+FIELD	Q	LQ;	o	VARTYPE_OBJECT
+FIELD	Q	LQ;	p	VARTYPE_VOID
+FIELD	Q	I	q	type
+FIELD	Q	I	r	type_family
+FIELD	Q	I	s	arraydim
+FIELD	Q	Ljava/lang/String;	t	value
+FIELD	Q	I	u	stack_size
+FIELD	Q	I	v	convinfo
+CLASS	R	de/fernflower/modules/decompiler/stats/SwitchStatement
+METHOD	R	()Lca;	a	getSimpleCopy
+METHOD	R	(I)Ljava/lang/String;	a	toJava
+METHOD	R	(LaJ;LaJ;)V	a	replaceExprent
+METHOD	R	(Lca;)Lca;	a	isHead
+METHOD	R	(Lca;Lca;)V	a	replaceStatement
+METHOD	R	()V	b	initSimpleCopy
+METHOD	R	()Ljava/util/List;	d	getSequentialObjects
+METHOD	R	()V	e	sortEdgesAndNodes
+METHOD	R	()V	e_	initExprents
+METHOD	R	()Ljava/util/List;	f	getHeadexprentList
+METHOD	R	()Ljava/util/List;	g	getCaseEdges
+METHOD	R	()Ljava/util/List;	h	getCaseStatements
+METHOD	R	()LcV;	i	getDefault_edge
+FIELD	R	Ljava/util/List;	a	caseStatements
+FIELD	R	Ljava/util/List;	b	caseEdges
+FIELD	R	Ljava/util/List;	k	caseValues
+FIELD	R	LcV;	l	default_edge
+FIELD	R	Ljava/util/List;	m	headexprent
+CLASS	S	de/fernflower/modules/decompiler/stats/RootStatement
+METHOD	S	(I)Ljava/lang/String;	a	toJava
+METHOD	S	()Lca;	e	getDummyExit
+FIELD	S	Lca;	a	dummyExit
+CLASS	T	de/fernflower/struct/consts/PrimitiveConstant
+METHOD	T	()V	a	initConstant
+METHOD	T	(LbK;)V	a	resolveConstant
+FIELD	T	Ljava/lang/Object;	a	value
+FIELD	T	Z	b	isArray
+FIELD	T	I	c	index
+CLASS	U	de/fernflower/struct/attr/StructLocalVariableTableAttribute
+METHOD	U	()Ljava/util/HashMap;	a	getMapVarNames
+METHOD	U	(LU;)V	a	addLocalVariableTable
+METHOD	U	(LbK;)V	a	initContent
+FIELD	U	Ljava/util/HashMap;	c	mapVarNames
+CLASS	V	de/fernflower/modules/renamer/ClassWrapperNode
+METHOD	V	()LbW;	a	getClassStruct
+METHOD	V	(LV;)V	a	addSubclass
+METHOD	V	()Ljava/util/List;	b	getSubclasses
+FIELD	V	LbW;	a	classStruct
+FIELD	V	Ljava/util/List;	b	subclasses
+CLASS	W	de/fernflower/struct/attr/StructAnnDefaultAttribute
+METHOD	W	()LaJ;	a	getDefaultValue
+METHOD	W	(LbK;)V	a	initContent
+FIELD	W	LaJ;	c	defaultValue
+CLASS	X	de/fernflower/modules/decompiler/exps/ArrayExprent
+METHOD	X	()LaJ;	a	copy
+METHOD	X	(I)Ljava/lang/String;	a	toJava
+METHOD	X	(LaJ;LaJ;)V	a	replaceExprent
+METHOD	X	()Ljava/util/List;	b	getAllExprents
+METHOD	X	()LQ;	c	getExprType
+METHOD	X	()I	d_	getExprentUse
+METHOD	X	()LaM;	e	checkExprTypeBounds
+METHOD	X	()LaJ;	f	getArray
+METHOD	X	()LaJ;	g	getIndex
+FIELD	X	LaJ;	c	array
+FIELD	X	LaJ;	d	index
+FIELD	X	LQ;	e	hardtype
+CLASS	Y	de/fernflower/modules/decompiler/vars/CheckTypesResult$ExprentTypePair
+FIELD	Y	LaJ;	a	exprent
+FIELD	Y	LQ;	b	type
+CLASS	Z	de/fernflower/code/optinstructions/INSTANCEOF
+CLASS	a	de/fernflower/main/AssertProcessor
+METHOD	a	(LaJ;Ljava/lang/String;Ljava/lang/String;)[Ljava/lang/Object;	a	getAssertionExprent
+METHOD	a	(Lca;Ljava/lang/String;Ljava/lang/String;)Z	a	replaceAssertion
+METHOD	a	(Lv;)V	a	findAssertionField
+METHOD	a	(LaJ;Ljava/lang/String;Ljava/lang/String;)Z	b	isAssertionField
+FIELD	a	LQ;	a	CLASS_ASSERTION_ERROR
+CLASS	aA	de/fernflower/struct/attr/StructGenericSignatureAttribute
+METHOD	aA	()Ljava/lang/String;	a	getSignature
+METHOD	aA	(LbK;)V	a	initContent
+FIELD	aA	Ljava/lang/String;	c	signature
+CLASS	aB	de/fernflower/modules/decompiler/InlineSingleBlockHelper
+METHOD	aB	(LS;)Z	a	inlineSingleBlocks
+METHOD	aB	(Lca;)Z	a	inlineSingleBlocksRec
+METHOD	aB	(Lca;Lca;)Z	a	isBreakEdgeLabeled
+METHOD	aB	(Lca;Lca;)Z	b	noExitLabels
+CLASS	aC	de/fernflower/modules/decompiler/exps/AssignmentExprent
+METHOD	aC	()LaJ;	a	copy
+METHOD	aC	(I)Ljava/lang/String;	a	toJava
+METHOD	aC	(LaJ;)V	a	setRight
+METHOD	aC	(LaJ;LaJ;)V	a	replaceExprent
+METHOD	aC	()Ljava/util/List;	b	getAllExprents
+METHOD	aC	(I)V	b	setCondtype
+METHOD	aC	()LQ;	c	getExprType
+METHOD	aC	()I	c_	getPrecedence
+METHOD	aC	()LaM;	e	checkExprTypeBounds
+METHOD	aC	()LaJ;	g	getLeft
+METHOD	aC	()LaJ;	h	getRight
+METHOD	aC	()I	i	getCondtype
+FIELD	aC	[Ljava/lang/String;	c	funceq
+FIELD	aC	LaJ;	d	left
+FIELD	aC	LaJ;	e	right
+FIELD	aC	I	f	condtype
+CLASS	aD	de/fernflower/main/DecompilerContext
+METHOD	aD	()LaD;	a	getCurrentContext
+METHOD	aD	(LaD;)V	a	setCurrentContext
+METHOD	aD	(LaI;)V	a	setCountercontainer
+METHOD	aD	(LbS;)V	a	setVarncollector
+METHOD	aD	(LcG;)V	a	setClassprocessor
+METHOD	aD	(LcL;)V	a	setImpcollector
+METHOD	aD	(Lde/fernflower/main/extern/IFernflowerLogger;)V	a	setLogger
+METHOD	aD	(Li;)V	a	setStructcontext
+METHOD	aD	(Ljava/lang/String;)Ljava/lang/Object;	a	getProperty
+METHOD	aD	(Ljava/lang/String;Ljava/lang/Object;)V	a	setProperty
+METHOD	aD	(Ljava/util/HashMap;)V	a	initContext
+METHOD	aD	(Lu;)V	a	setPoolInterceptor
+METHOD	aD	()LcL;	b	getImpcollector
+METHOD	aD	(Ljava/lang/String;)Z	b	getOption
+METHOD	aD	()LbS;	c	getVarncollector
+METHOD	aD	()Li;	d	getStructcontext
+METHOD	aD	()LaI;	e	getCountercontainer
+METHOD	aD	()LcG;	f	getClassprocessor
+METHOD	aD	()Lu;	g	getPoolInterceptor
+METHOD	aD	()Lde/fernflower/main/extern/IFernflowerLogger;	h	getLogger
+FIELD	aD	Ljava/lang/ThreadLocal;	a	currentContext
+FIELD	aD	Ljava/util/HashMap;	b	properties
+FIELD	aD	Li;	c	structcontext
+FIELD	aD	LcL;	d	impcollector
+FIELD	aD	LbS;	e	varncollector
+FIELD	aD	LaI;	f	countercontainer
+FIELD	aD	LcG;	g	classprocessor
+FIELD	aD	Lu;	h	poolinterceptor
+FIELD	aD	Lde/fernflower/main/extern/IFernflowerLogger;	i	logger
+CLASS	aE	de/fernflower/code/optinstructions/IINC
+CLASS	aF	de/fernflower/code/optinstructions/LSTORE
+CLASS	aG	de/fernflower/modules/decompiler/exps/FieldExprent
+METHOD	aG	()LaJ;	a	copy
+METHOD	aG	(I)Ljava/lang/String;	a	toJava
+METHOD	aG	(LaJ;LaJ;)V	a	replaceExprent
+METHOD	aG	()Ljava/util/List;	b	getAllExprents
+METHOD	aG	()LQ;	c	getExprType
+METHOD	aG	()I	d_	getExprentUse
+METHOD	aG	()Ljava/lang/String;	g	getClassname
+METHOD	aG	()Ljava/lang/String;	h	getDescriptor
+METHOD	aG	()LaJ;	i	getInstance
+METHOD	aG	()Z	j	isStatic
+METHOD	aG	()Ljava/lang/String;	k	getName
+FIELD	aG	Ljava/lang/String;	c	name
+FIELD	aG	Ljava/lang/String;	d	classname
+FIELD	aG	Z	e	isStatic
+FIELD	aG	LaJ;	f	instance
+FIELD	aG	Lam;	g	descriptor
+CLASS	aH	de/fernflower/code/interpreter/InstructionImpact
+METHOD	aH	(LaR;Lj;LbK;)V	a	processSpecialInstructions
+FIELD	aH	[[[I	a	stack_impact
+FIELD	aH	[I	b	arr_type
+CLASS	aI	de/fernflower/main/collectors/CounterContainer
+METHOD	aI	()I	a	getCounter
+METHOD	aI	(I)I	a	getCounterAndIncrement
+METHOD	aI	(II)V	a	setCounter
+FIELD	aI	[I	a	values
+CLASS	aJ	de/fernflower/modules/decompiler/exps/Exprent
+METHOD	aJ	()LaJ;	a	copy
+METHOD	aJ	(I)Ljava/lang/String;	a	toJava
+METHOD	aJ	(LaJ;LaJ;)V	a	replaceExprent
+METHOD	aJ	(Z)Ljava/util/List;	a	getAllExprents
+METHOD	aJ	()Ljava/util/List;	b	getAllExprents
+METHOD	aJ	(LaJ;)Z	b	containsExprent
+METHOD	aJ	()LQ;	c	getExprType
+METHOD	aJ	()I	c_	getPrecedence
+METHOD	aJ	()I	d_	getExprentUse
+METHOD	aJ	()LaM;	e	checkExprTypeBounds
+METHOD	aJ	()Ljava/util/Set;	p	getAllVariables
+FIELD	aJ	I	a	type
+FIELD	aJ	I	b	id
+CLASS	aK	de/fernflower/main/ClassesProcessor$ClassNode
+METHOD	aK	(Ljava/lang/String;)LaK;	a	getClassNode
+FIELD	aK	I	a	type
+FIELD	aK	I	b	access
+FIELD	aK	Ljava/lang/String;	c	simpleName
+FIELD	aK	LbW;	d	classStruct
+FIELD	aK	Lv;	e	wrapper
+FIELD	aK	Ljava/lang/String;	f	enclosingMethod
+FIELD	aK	LcR;	g	superInvocation
+FIELD	aK	Ljava/util/HashMap;	h	mapFieldsToVars
+FIELD	aK	Ljava/util/HashMap;	i	this$0
+FIELD	aK	LQ;	j	anonimousClassType
+FIELD	aK	Ljava/util/List;	k	nested
+FIELD	aK	Ljava/util/Set;	l	enclosingClasses
+FIELD	aK	LaK;	m	parent
+CLASS	aL	de/fernflower/code/optinstructions/LDC2_W
+CLASS	aM	de/fernflower/modules/decompiler/vars/CheckTypesResult
+METHOD	aM	()Ljava/util/List;	a	getLstMaxTypeExprents
+METHOD	aM	(LaJ;LQ;)V	a	addMaxTypeExprent
+METHOD	aM	()Ljava/util/List;	b	getLstMinTypeExprents
+METHOD	aM	(LaJ;LQ;)V	b	addMinTypeExprent
+FIELD	aM	Ljava/util/List;	a	lstMaxTypeExprents
+FIELD	aM	Ljava/util/List;	b	lstMinTypeExprents
+CLASS	aN	de/fernflower/code/optinstructions/DSTORE
+CLASS	aO	de/fernflower/modules/decompiler/sforms/SSAConstructorSparseEx
+METHOD	aO	()Ljava/util/HashMap;	a	getPhi
+METHOD	aO	(LS;Lbn;)V	a	splitVariables
+METHOD	aO	(LaJ;[LbZ;)V	a	processExprent
+METHOD	aO	(LbZ;LbZ;)LbZ;	a	mergeMaps
+METHOD	aO	(LbZ;Ljava/lang/Integer;Ljava/lang/Integer;)V	a	setCurrentVar
+METHOD	aO	(Lbn;)LbZ;	a	createFirstMap
+METHOD	aO	(Lca;Lq;Ldd;)V	a	setCatchMaps
+METHOD	aO	(Ljava/lang/Integer;)Ljava/lang/Integer;	a	getNextFreeVersion
+METHOD	aO	(Ljava/lang/String;Ljava/lang/String;Lq;Ljava/lang/String;)LbZ;	a	getFilteredOutMap
+METHOD	aO	(Lq;Ljava/util/HashSet;)V	a	ssaStatements
+METHOD	aO	(LbZ;LbZ;)Z	b	mapsEqual
+FIELD	aO	Ljava/util/HashMap;	a	inVarVersions
+FIELD	aO	Ljava/util/HashMap;	b	outVarVersions
+FIELD	aO	Ljava/util/HashMap;	c	outNegVarVersions
+FIELD	aO	Ljava/util/HashMap;	d	extraVarVersions
+FIELD	aO	Ljava/util/HashMap;	e	phi
+FIELD	aO	Ljava/util/HashMap;	f	lastversion
+FIELD	aO	Ljava/util/List;	g	startVars
+FIELD	aO	LcM;	h	factory
+CLASS	aP	de/fernflower/code/optinstructions/PUTFIELD
+CLASS	aQ	de/fernflower/modules/decompiler/vars/VarTypeProcessor$2
+METHOD	aQ	(LaJ;)I	a	processExprent
+FIELD	aQ	Lcu;	a	this$0
+CLASS	aR	de/fernflower/struct/gen/DataPoint
+METHOD	aR	()LaR;	a	copy
+METHOD	aR	(I)LQ;	a	getVariable
+METHOD	aR	(ILQ;)V	a	setVariable
+METHOD	aR	(Lbn;)LaR;	a	getInitialDataPoint
+METHOD	aR	(Ljava/util/List;)V	a	setLocalVariables
+METHOD	aR	()Ljava/util/List;	b	getLocalVariables
+METHOD	aR	()Lcb;	c	getStack
+FIELD	aR	Ljava/util/List;	a	localVariables
+FIELD	aR	Lcb;	b	stack
+CLASS	aS	de/fernflower/modules/decompiler/SequenceHelper
+METHOD	aS	(Lca;)V	a	condenseSequences
+METHOD	aS	(Lca;Lca;)Z	a	isSequenceDisbandable
+METHOD	aS	(Lca;Z)V	a	destroyStatementContent
+METHOD	aS	(Lcx;)V	a	removeEmptyStatements
+METHOD	aS	(Lca;)V	b	destroyAndFlattenStatement
+METHOD	aS	(Lca;)V	c	condenseSequencesRec
+METHOD	aS	(Lca;)Lca;	d	getFirstExprentlist
+CLASS	aT	de/fernflower/modules/decompiler/vars/VarTypeProcessor$1
+METHOD	aT	(LaJ;)I	a	processExprent
+CLASS	aU	de/fernflower/modules/decompiler/deobfuscator/ExceptionDeobfuscator$1
+METHOD	aU	()Ljava/util/List;	a	getReversePostOrderList
+METHOD	aU	()Ljava/util/Set;	b	getRoots
+FIELD	aU	LcI;	a	val$graph
+CLASS	aV	de/fernflower/modules/decompiler/SimplifyExprentsHelper
+METHOD	aV	(LaJ;)LaJ;	a	isSimpleConstructorInvocation
+METHOD	aV	(LaJ;LaJ;)Z	a	isStackAssignement
+METHOD	aV	(Lca;Ljava/util/HashSet;LaO;)Z	a	buildIff
+METHOD	aV	(Ljava/util/List;)Z	a	simplifyStackVarsExprents
+METHOD	aV	(Ljava/util/List;I)I	a	isArrayInitializer
+METHOD	aV	(LaJ;LaJ;)Z	b	isQualifiedNewGetClass
+FIELD	aV	Z	a	firstInvocation
+CLASS	aW	de/fernflower/modules/decompiler/exps/AssertExprent
+METHOD	aW	(I)Ljava/lang/String;	a	toJava
+FIELD	aW	Ljava/util/List;	c	parameters
+CLASS	aX	de/fernflower/modules/decompiler/DomHelper
+METHOD	aX	(LcI;)LS;	a	graphToStatement
+METHOD	aX	(Lca;)V	a	removeSynchronizedHandler
+METHOD	aX	(Lca;Ljava/util/HashMap;)Z	a	processStatement
+METHOD	aX	(Lca;ZLjava/util/HashMap;)Lca;	a	findGeneralStatement
+METHOD	aX	(Ljava/util/HashSet;)Z	a	checkSynchronizedCompleteness
+METHOD	aX	(Lca;)LcE;	b	calcPostDominators
+METHOD	aX	(Lca;Ljava/util/HashMap;)Z	b	findSimpleStatements
+METHOD	aX	(Lca;)V	c	buildSynchronized
+CLASS	aY	de/fernflower/modules/decompiler/exps/NewExprent
+METHOD	aY	()LaJ;	a	copy
+METHOD	aY	(I)Ljava/lang/String;	a	toJava
+METHOD	aY	(LaJ;LaJ;)V	a	replaceExprent
+METHOD	aY	(LcR;)V	a	setConstructor
+METHOD	aY	(Ljava/lang/String;Ljava/util/List;I)Ljava/lang/String;	a	getQualifiedNewInstance
+METHOD	aY	(Ljava/util/List;)V	a	setLstArrayElements
+METHOD	aY	()Ljava/util/List;	b	getAllExprents
+METHOD	aY	()LQ;	c	getExprType
+METHOD	aY	()I	c_	getPrecedence
+METHOD	aY	()LaM;	e	checkExprTypeBounds
+METHOD	aY	()LcR;	g	getConstructor
+METHOD	aY	()Ljava/util/List;	h	getLstDims
+METHOD	aY	()LQ;	i	getNewtype
+METHOD	aY	()Ljava/util/List;	j	getLstArrayElements
+METHOD	aY	()V	k	setDirectArrayInit
+METHOD	aY	()Z	l	isAnonymous
+METHOD	aY	()V	m	setEnumconst
+METHOD	aY	()V	n	setAnonymous
+FIELD	aY	LcR;	c	constructor
+FIELD	aY	LQ;	d	newtype
+FIELD	aY	Ljava/util/List;	e	lstDims
+FIELD	aY	Ljava/util/List;	f	lstArrayElements
+FIELD	aY	Z	g	directArrayInit
+FIELD	aY	Z	h	anonymous
+FIELD	aY	Z	i	enumconst
+CLASS	aZ	de/fernflower/modules/renamer/ConverterHelper
+METHOD	aZ	(Ljava/lang/String;)Ljava/lang/String;	a	getSimpleClassName
+METHOD	aZ	(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;	a	replaceSimpleClassName
+FIELD	aZ	Ljava/util/HashSet;	a	setReserved
+FIELD	aZ	I	b	class_counter
+FIELD	aZ	I	c	field_counter
+FIELD	aZ	I	d	method_counter
+FIELD	aZ	Ljava/util/HashSet;	e	setNonStandardClassNames
+CLASS	aa	de/fernflower/modules/decompiler/exps/VarExprent
+METHOD	aa	()LaJ;	a	copy
+METHOD	aa	(I)Ljava/lang/String;	a	toJava
+METHOD	aa	(LQ;)V	a	setVartype
+METHOD	aa	()Ljava/util/List;	b	getAllExprents
+METHOD	aa	(I)V	b	setIndex
+METHOD	aa	()LQ;	c	getExprType
+METHOD	aa	(I)V	c	setVersion
+METHOD	aa	()I	d_	getExprentUse
+METHOD	aa	()I	f	getIndex0
+METHOD	aa	()LQ;	g	getVartype
+METHOD	aa	()Z	h	isDefinition
+METHOD	aa	()V	i	setDefinition
+METHOD	aa	()Lce;	j	getProcessor
+METHOD	aa	()I	k	getVersion
+METHOD	aa	()Z	l	isClassdef
+METHOD	aa	()V	m	setClassdef
+METHOD	aa	()Z	n	isStack
+METHOD	aa	()V	o	setStack
+FIELD	aa	I	c	index
+FIELD	aa	LQ;	d	vartype
+FIELD	aa	Z	e	definition
+FIELD	aa	Lce;	f	processor
+FIELD	aa	I	g	version
+FIELD	aa	Z	h	classdef
+FIELD	aa	Z	i	stack
+CLASS	ab	de/fernflower/code/optinstructions/INVOKESTATIC
+CLASS	ac	de/fernflower/code/optinstructions/GOTO_W
+CLASS	ad	de/fernflower/code/optinstructions/BIPUSH
+CLASS	ae	de/fernflower/code/optinstructions/PUTSTATIC
+CLASS	af	de/fernflower/struct/attr/StructEnclosingMethodAttribute
+METHOD	af	()Ljava/lang/String;	a	getClassname
+METHOD	af	(LbK;)V	a	initContent
+METHOD	af	()Ljava/lang/String;	b	getMethodDescriptor
+METHOD	af	()Ljava/lang/String;	c	getMethodName
+FIELD	af	Ljava/lang/String;	c	classname
+FIELD	af	Ljava/lang/String;	d	mtname
+FIELD	af	Ljava/lang/String;	e	methodDescriptor
+CLASS	ag	de/fernflower/modules/decompiler/LabelHelper
+METHOD	ag	(LS;)V	a	cleanUpEdges
+METHOD	ag	(Lca;)V	a	lowClosures
+METHOD	ag	(Lca;Ljava/util/HashMap;Lca;)V	a	processEdgesWithNext
+METHOD	ag	(Lca;Ljava/util/HashSet;)V	a	lowContinueLabels
+METHOD	ag	(LS;)V	b	setRetEdgesUnlabeled
+METHOD	ag	(Lca;)V	b	replaceContinueWithBreak
+METHOD	ag	(Lca;)V	c	liftClosures
+METHOD	ag	(Lca;)V	d	removeNonImmediateEdges
+METHOD	ag	(Lca;)V	e	resetAllEdges
+METHOD	ag	(Lca;)Ljava/util/HashMap;	f	setExplicitEdges
+METHOD	ag	(Lca;)V	g	hideDefaultSwitchEdges
+METHOD	ag	(Lca;)[Ljava/util/HashSet;	h	processStatementLabel
+CLASS	ah	de/fernflower/modules/decompiler/decompose/IGraphNode
+METHOD	ah	()Ljava/util/List;	a	getPredecessors
+CLASS	ai	de/fernflower/code/cfg/ExceptionRangeCFG
+METHOD	ai	()Z	a	isCircular
+METHOD	ai	(LbT;)V	a	setHandler
+METHOD	ai	()LbT;	b	getHandler
+METHOD	ai	()Ljava/util/List;	c	getProtectedRange
+METHOD	ai	()Ljava/lang/String;	d	getExceptionType
+FIELD	ai	Ljava/util/List;	a	protectedRange
+FIELD	ai	LbT;	b	handler
+FIELD	ai	Ljava/lang/String;	c	exceptionType
+CLASS	aj	de/fernflower/code/JumpInstruction
+METHOD	aj	(LcQ;)V	a	initInstruction
+METHOD	aj	()Lj;	b	clone
+FIELD	aj	I	d	destination
+CLASS	ak	de/fernflower/modules/decompiler/decompose/IGraph
+METHOD	ak	()Ljava/util/List;	a	getReversePostOrderList
+METHOD	ak	()Ljava/util/Set;	b	getRoots
+CLASS	al	de/fernflower/util/FastSparseSetFactory$FastSparseSetIterator
+METHOD	al	(I)I	a	getNextIndex
+FIELD	al	LcE;	a	colValuesInternal
+FIELD	al	[I	b	data
+FIELD	al	[I	c	next
+FIELD	al	I	d	size
+FIELD	al	I	e	pointer
+FIELD	al	I	f	next_pointer
+CLASS	am	de/fernflower/struct/gen/FieldDescriptor
+METHOD	am	()Ljava/lang/String;	a	getDescriptor
+METHOD	am	(Ljava/lang/String;)Lam;	a	parseDescriptor
+FIELD	am	Lam;	a	INTEGER_DESCRIPTOR
+FIELD	am	Lam;	b	LONG_DESCRIPTOR
+FIELD	am	Lam;	c	FLOAT_DESCRIPTOR
+FIELD	am	Lam;	d	DOUBLE_DESCRIPTOR
+FIELD	am	LQ;	e	type
+FIELD	am	Ljava/lang/String;	f	descriptorString
+CLASS	an	de/fernflower/modules/decompiler/decompose/FastExtendedPostdominanceHelper
+METHOD	an	()V	a	removeErroneousNodes
+METHOD	an	(I)V	a	calcReachabilitySuppPoints
+METHOD	an	(Lan;)Ljava/util/HashMap;	a	access$0
+METHOD	an	(Lbq;)V	a	filterOnDominance
+METHOD	an	(Lca;)Ljava/util/HashMap;	a	getExtendedPostdominators
+METHOD	an	(Ly;I)V	a	iterateReachability
+METHOD	an	()V	b	calcDefaultReachableSets
+METHOD	an	(Lan;)Law;	b	access$1
+METHOD	an	(Lbq;)V	b	filterOnExceptionRanges
+METHOD	an	(Lan;)Ljava/util/HashMap;	c	access$2
+FIELD	an	Ljava/util/List;	a	lstReversePostOrderList
+FIELD	an	Ljava/util/HashMap;	b	mapSupportPoints
+FIELD	an	Ljava/util/HashMap;	c	mapExtPostdominators
+FIELD	an	Lca;	d	statement
+FIELD	an	Law;	e	factory
+CLASS	ao	de/fernflower/modules/decompiler/exps/ExitExprent
+METHOD	ao	()LaJ;	a	copy
+METHOD	ao	(I)Ljava/lang/String;	a	toJava
+METHOD	ao	(LaJ;LaJ;)V	a	replaceExprent
+METHOD	ao	()Ljava/util/List;	b	getAllExprents
+METHOD	ao	()LaM;	e	checkExprTypeBounds
+METHOD	ao	()I	f	getExittype
+METHOD	ao	()LaJ;	g	getValue
+METHOD	ao	()LQ;	h	getRettype
+FIELD	ao	I	c	exittype
+FIELD	ao	LaJ;	d	value
+FIELD	ao	LQ;	e	rettype
+CLASS	ap	de/fernflower/code/instructions/LOOKUPSWITCH
+CLASS	aq	de/fernflower/modules/decompiler/exps/SwitchExprent
+METHOD	aq	()LaJ;	a	copy
+METHOD	aq	(I)Ljava/lang/String;	a	toJava
+METHOD	aq	(LaJ;LaJ;)V	a	replaceExprent
+METHOD	aq	(Ljava/util/List;)V	a	setCaseValues
+METHOD	aq	()Ljava/util/List;	b	getAllExprents
+METHOD	aq	()LaM;	e	checkExprTypeBounds
+FIELD	aq	LaJ;	c	value
+FIELD	aq	Ljava/util/List;	d	caseValues
+CLASS	ar	de/fernflower/code/optinstructions/ISTORE
+CLASS	as	de/fernflower/modules/decompiler/vars/VarVersionsGraph
+METHOD	as	()V	a	initDominators
+METHOD	as	(Las;Ljava/util/Collection;)Ljava/util/LinkedList;	a	access$0
+METHOD	as	(LbD;Ljava/util/HashSet;)Z	a	isDominatorSet
+METHOD	as	(LbD;Ljava/util/List;Ljava/util/HashSet;)V	a	addToReversePostOrderListIterative
+METHOD	as	(Lde;)LbD;	a	createNode
+FIELD	as	LcE;	a	nodes
+FIELD	as	Lc;	b	engine
+CLASS	at	de/fernflower/main/decompiler/helper/PrintStreamLogger
+FIELD	at	I	a	severity
+FIELD	at	I	b	indent
+FIELD	at	Ljava/io/PrintStream;	c	stream
+CLASS	au	de/fernflower/modules/decompiler/stats/DoStatement
+METHOD	au	()Lca;	a	getSimpleCopy
+METHOD	au	(I)Ljava/lang/String;	a	toJava
+METHOD	au	(LaJ;)V	a	setConditionExprent
+METHOD	au	(LaJ;LaJ;)V	a	replaceExprent
+METHOD	au	(Lca;)Lca;	a	isHead
+METHOD	au	(I)V	b	setLooptype
+METHOD	au	(LaJ;)V	b	setIncExprent
+METHOD	au	(LaJ;)V	c	setInitExprent
+METHOD	au	()Ljava/util/List;	d	getSequentialObjects
+METHOD	au	()Ljava/util/List;	e	getInitExprentList
+METHOD	au	()Ljava/util/List;	f	getConditionExprentList
+METHOD	au	()Ljava/util/List;	g	getIncExprentList
+METHOD	au	()LaJ;	h	getConditionExprent
+METHOD	au	()LaJ;	i	getIncExprent
+METHOD	au	()LaJ;	j	getInitExprent
+METHOD	au	()I	k	getLooptype
+FIELD	au	I	a	looptype
+FIELD	au	Ljava/util/List;	b	initExprent
+FIELD	au	Ljava/util/List;	k	conditionExprent
+FIELD	au	Ljava/util/List;	l	incExprent
+CLASS	av	de/fernflower/struct/gen/MethodDescriptor
+METHOD	av	()Ljava/lang/String;	a	getDescriptor
+METHOD	av	(Ljava/lang/String;)Lav;	a	parseDescriptor
+FIELD	av	[LQ;	a	params
+FIELD	av	LQ;	b	ret
+CLASS	aw	de/fernflower/util/FastFixedSetFactory
+METHOD	aw	()Lp;	a	spawnEmptySet
+METHOD	aw	(Law;)LcE;	a	access$0
+METHOD	aw	(Law;)I	b	access$1
+FIELD	aw	LcE;	a	colValuesInternal
+FIELD	aw	I	b	dataLength
+CLASS	ax	de/fernflower/modules/decompiler/exps/FunctionExprent
+METHOD	ax	()LaJ;	a	copy
+METHOD	ax	(I)Ljava/lang/String;	a	toJava
+METHOD	ax	(LQ;)V	a	setImplicitType
+METHOD	ax	(LaJ;LaJ;)V	a	replaceExprent
+METHOD	ax	(LaJ;ZI)Ljava/lang/String;	a	wrapOperandString
+METHOD	ax	([LQ;)LQ;	a	getMaxVarType
+METHOD	ax	()Ljava/util/List;	b	getAllExprents
+METHOD	ax	(I)V	b	setFunctype
+METHOD	ax	()LQ;	c	getExprType
+METHOD	ax	()I	c_	getPrecedence
+METHOD	ax	()I	d_	getExprentUse
+METHOD	ax	()LaM;	e	checkExprTypeBounds
+METHOD	ax	()LQ;	h	getSimpleCastType
+METHOD	ax	()I	i	getFunctype
+METHOD	ax	()Ljava/util/List;	j	getLstOperands
+FIELD	ax	[LQ;	c	types
+FIELD	ax	[Ljava/lang/String;	d	operators
+FIELD	ax	[I	e	precedence
+FIELD	ax	Ljava/util/HashSet;	f	associativity
+FIELD	ax	I	g	functype
+FIELD	ax	LQ;	h	implicitType
+FIELD	ax	Ljava/util/List;	i	lstOperands
+CLASS	ay	de/fernflower/modules/decompiler/decompose/DominatorEngine
+METHOD	ay	()V	a	calcIDoms
+METHOD	ay	(Ljava/lang/Integer;Ljava/lang/Integer;)Z	a	isDominator
+METHOD	ay	()LcE;	b	getOrderedIDoms
+FIELD	ay	Lca;	a	statement
+FIELD	ay	LcE;	b	colOrderedIDoms
+CLASS	az	de/fernflower/modules/decompiler/vars/VarVersionEdge
+FIELD	az	LbD;	a	source
+FIELD	az	LbD;	b	dest
+FIELD	az	I	c	type
+FIELD	az	I	d	hashCode
+CLASS	b	de/fernflower/code/optinstructions/JSR
+CLASS	bA	de/fernflower/struct/StructField
+METHOD	bA	()LcE;	a	getAttributes
+METHOD	bA	(LbK;I)V	a	initStrings
+METHOD	bA	(LcE;)V	a	setAttributes
+METHOD	bA	()Ljava/lang/String;	b	getDescriptor
+METHOD	bA	()Ljava/lang/String;	c	getName
+FIELD	bA	I	a	access_flags
+FIELD	bA	I	b	name_index
+FIELD	bA	I	c	descriptor_index
+FIELD	bA	Ljava/lang/String;	d	name
+FIELD	bA	Ljava/lang/String;	e	descriptor
+FIELD	bA	LcE;	f	attributes
+CLASS	bB	de/fernflower/modules/decompiler/ExprProcessor
+METHOD	bB	(ILbs;Ljava/util/List;I)V	a	insertByOffsetEx
+METHOD	bB	(LB;)LB;	a	copyVarExprents
+METHOD	bB	(LQ;)Ljava/lang/String;	a	getTypeName
+METHOD	bB	(LQ;Z)Ljava/lang/String;	a	getCastTypeName
+METHOD	bB	(LS;LbK;)V	a	processStatement
+METHOD	bB	(LaJ;LQ;Ljava/lang/StringBuilder;IZ)Z	a	getCastedExprent
+METHOD	bB	(LaJ;LQ;Ljava/lang/StringBuilder;IZZ)Z	a	getCastedExprent
+METHOD	bB	(Lbs;Ljava/util/List;LaJ;)V	a	pushEx
+METHOD	bB	(Lbs;Ljava/util/List;LaJ;LQ;)V	a	pushEx
+METHOD	bB	(Lca;)V	a	initStatementExprents
+METHOD	bB	(Lca;IZ)Ljava/lang/String;	a	jmpWrapper
+METHOD	bB	(Lca;Ldd;Ljava/util/Map;)V	a	collectCatchVars
+METHOD	bB	(Lci;LB;LbK;)V	a	processBlock
+METHOD	bB	(Ljava/lang/String;)Ljava/lang/String;	a	buildJavaClassName
+METHOD	bB	(Ljava/util/LinkedList;)Ljava/lang/String;	a	buildEntryPointKey
+METHOD	bB	(Ljava/util/List;I)Ljava/lang/String;	a	listToJava
+METHOD	bB	(LQ;)Ljava/lang/String;	b	getCastTypeName
+METHOD	bB	(LQ;Z)Ljava/lang/String;	b	getTypeName
+METHOD	bB	(LQ;)LbI;	c	getDefaultArrayValue
+FIELD	bB	Ljava/util/HashMap;	a	mapConsts
+FIELD	bB	[LQ;	b	consts
+FIELD	bB	[LQ;	c	vartypes
+FIELD	bB	[LQ;	d	arrtypes
+FIELD	bB	[I	f	func1
+FIELD	bB	[I	g	func2
+FIELD	bB	[I	h	func3
+FIELD	bB	[I	i	func4
+FIELD	bB	[I	j	func5
+FIELD	bB	[I	k	func6
+FIELD	bB	[I	l	func7
+FIELD	bB	[I	m	func8
+FIELD	bB	[I	n	arr_type
+FIELD	bB	[I	o	negifs
+FIELD	bB	[Ljava/lang/String;	p	typeNames
+FIELD	bB	Lce;	q	varProcessor
+CLASS	bC	de/fernflower/util/FastFixedSetFactory$FastFixedSetIterator
+METHOD	bC	(I)I	a	getNextIndex
+FIELD	bC	LcE;	a	colValuesInternal
+FIELD	bC	[I	b	data
+FIELD	bC	I	c	size
+FIELD	bC	I	d	pointer
+FIELD	bC	I	e	next_pointer
+CLASS	bD	de/fernflower/modules/decompiler/vars/VarVersionNode
+METHOD	bD	()Ljava/util/List;	a	getPredecessors
+METHOD	bD	(Laz;)V	a	removeSuccessor
+METHOD	bD	(Laz;)V	b	removePredecessor
+METHOD	bD	(Laz;)V	c	addSuccessor
+METHOD	bD	(Laz;)V	d	addPredecessor
+FIELD	bD	I	a	var
+FIELD	bD	I	b	version
+FIELD	bD	Ljava/util/Set;	c	succs
+FIELD	bD	Ljava/util/Set;	d	preds
+FIELD	bD	I	e	flags
+FIELD	bD	LbZ;	f	live
+CLASS	bE	de/fernflower/code/optinstructions/GETFIELD
+CLASS	bF	de/fernflower/code/optinstructions/GETSTATIC
+CLASS	bG	de/fernflower/code/ConstantsUtil
+METHOD	bG	(I)Ljava/lang/String;	a	getName
+METHOD	bG	(IZI[I)Lj;	a	getInstructionInstance
+METHOD	bG	(I)Lj;	b	getInstructionInstance
+FIELD	bG	[Ljava/lang/String;	a	opcodeNames
+FIELD	bG	[Ljava/lang/Class;	b	opcodeClasses
+CLASS	bH	de/fernflower/modules/decompiler/vars/VarVersionsGraph$1
+METHOD	bH	()Ljava/util/List;	a	getReversePostOrderList
+METHOD	bH	()Ljava/util/Set;	b	getRoots
+FIELD	bH	Las;	a	this$0
+FIELD	bH	Ljava/util/HashSet;	b	val$roots
+CLASS	bI	de/fernflower/modules/decompiler/exps/ConstExprent
+METHOD	bI	()LaJ;	a	copy
+METHOD	bI	(I)Ljava/lang/String;	a	toJava
+METHOD	bI	(LQ;)V	a	setConsttype
+METHOD	bI	(Ljava/lang/String;)Ljava/lang/String;	a	convertStringToJava
+METHOD	bI	()Ljava/util/List;	b	getAllExprents
+METHOD	bI	(I)LbI;	b	getZeroConstant
+METHOD	bI	()LQ;	c	getExprType
+METHOD	bI	()I	d_	getExprentUse
+METHOD	bI	()Z	g	hasBooleanValue
+METHOD	bI	()Z	h	hasValueOne
+METHOD	bI	()LQ;	i	getConsttype
+METHOD	bI	()Ljava/lang/Object;	j	getValue
+METHOD	bI	()I	k	getIntValue
+METHOD	bI	()Z	l	isBoolPermitted
+FIELD	bI	Ljava/util/HashMap;	c	escapes
+FIELD	bI	LQ;	d	consttype
+FIELD	bI	Ljava/lang/Object;	e	value
+FIELD	bI	Z	f	boolPermitted
+CLASS	bJ	de/fernflower/modules/decompiler/vars/VarProcessor$1
+CLASS	bK	de/fernflower/struct/consts/ConstantPool
+METHOD	bK	(I)LT;	a	getPrimitiveConstant
+METHOD	bK	(IIII)[Ljava/lang/String;	a	getClassElement
+METHOD	bK	(ILjava/lang/String;)Ljava/lang/String;	a	buildNewDescriptor
+METHOD	bK	(Ljava/lang/String;)Ljava/lang/String;	a	buildNewClassname
+METHOD	bK	(I)Lg;	b	getLinkConstant
+METHOD	bK	(I)Lby;	c	getConstant
+FIELD	bK	Ljava/util/List;	a	pool
+FIELD	bK	Lu;	b	interceptor
+CLASS	bL	de/fernflower/struct/attr/StructAnnotationAttribute
+METHOD	bL	()Ljava/util/List;	a	getAnnotations
+METHOD	bL	(LbK;)V	a	initContent
+METHOD	bL	(Ljava/io/DataInputStream;LbK;)Lch;	a	parseAnnotation
+METHOD	bL	(Ljava/io/DataInputStream;LbK;)LaJ;	b	parseAnnotationElement
+FIELD	bL	Ljava/util/List;	c	annotations
+CLASS	bM	de/fernflower/struct/lazy/LazyLoader$Link
+FIELD	bM	Ljava/lang/String;	a	externPath
+FIELD	bM	Ljava/lang/String;	b	internPath
+CLASS	bN	de/fernflower/code/optinstructions/TABLESWITCH
+CLASS	bO	de/fernflower/code/optinstructions/INVOKESPECIAL
+CLASS	bP	de/fernflower/main/InitializerProcessor
+METHOD	bP	(LaJ;LcX;)Z	a	isExprentIndependent
+METHOD	bP	(LcR;LcX;Lv;Z)Z	a	isInvocationInitConstructor
+METHOD	bP	(Lca;)Lca;	a	findFirstData
+METHOD	bP	(Lv;)V	a	extractDynamicInitializers
+METHOD	bP	(Lv;)V	b	liftConstructor
+METHOD	bP	(Lv;)V	c	hideEmptySuper
+CLASS	bQ	de/fernflower/struct/gen/generics/GenericMethodDescriptor
+FIELD	bQ	Ljava/util/List;	a	fparameters
+FIELD	bQ	Ljava/util/List;	b	fbounds
+FIELD	bQ	Ljava/util/List;	c	params
+FIELD	bQ	Lw;	d	ret
+FIELD	bQ	Ljava/util/List;	e	exceptions
+CLASS	bR	de/fernflower/main/ClassWriter
+METHOD	bR	(LQ;)Ljava/lang/String;	a	getTypePrintOut
+METHOD	bR	(LaK;Lbn;Ljava/io/BufferedWriter;I)Z	a	methodToJava
+METHOD	bR	(LaK;Ljava/io/BufferedWriter;I)V	a	classToJava
+METHOD	bR	(LcE;)Ljava/util/List;	a	getAllAnnotations
+METHOD	bR	(Ljava/lang/String;I)Ljava/lang/String;	a	getDescriptorPrintOut
+METHOD	bR	(Lv;LbW;LbA;Ljava/io/BufferedWriter;I)V	a	fieldToJava
+METHOD	bR	(LcE;)Ljava/util/List;	b	getAllParameterAnnotations
+FIELD	bR	[I	a	modval_class
+FIELD	bR	[Ljava/lang/String;	b	modstr_class
+FIELD	bR	[I	c	modval_field
+FIELD	bR	[Ljava/lang/String;	d	modstr_field
+FIELD	bR	[I	e	modval_meth
+FIELD	bR	[Ljava/lang/String;	f	modstr_meth
+FIELD	bR	Ljava/util/HashSet;	g	mod_notinterface
+FIELD	bR	Ljava/util/HashSet;	h	mod_notinterface_fields
+FIELD	bR	Ljava/util/HashSet;	i	mod_notinterface_meth
+FIELD	bR	Lx;	j	ref14processor
+FIELD	bR	Lu;	k	interceptor
+CLASS	bS	de/fernflower/main/collectors/VarNamesCollector
+METHOD	bS	(I)Ljava/lang/String;	a	getFreeName
+METHOD	bS	(Ljava/lang/String;)V	a	addName
+METHOD	bS	(Ljava/lang/String;)Ljava/lang/String;	b	getFreeName
+FIELD	bS	Ljava/util/HashSet;	a	usedNames
+CLASS	bT	de/fernflower/code/cfg/BasicBlock
+METHOD	bT	()Ljava/util/List;	a	getPredecessors
+METHOD	bT	(LbT;)V	a	addPredecessor
+METHOD	bT	(LbT;LbT;)V	a	replaceSuccessor
+METHOD	bT	(LcQ;)V	a	setSeq
+METHOD	bT	(Ljava/util/List;)V	a	setInstrOldOffsets
+METHOD	bT	()Lj;	b	getInstruction
+METHOD	bT	(LbT;)V	b	removePredecessor
+METHOD	bT	()Lj;	c	getLastInstruction
+METHOD	bT	(LbT;)V	c	addSuccessor
+METHOD	bT	()Ljava/util/List;	d	getPreds
+METHOD	bT	(LbT;)V	d	removeSuccessor
+METHOD	bT	()LcQ;	e	getSeq
+METHOD	bT	(LbT;)V	e	addSuccessorException
+METHOD	bT	()Ljava/util/List;	f	getSuccs
+METHOD	bT	(LbT;)V	f	removeSuccessorException
+METHOD	bT	()Ljava/util/List;	g	getSuccExceptions
+METHOD	bT	(LbT;)Z	g	isSuccessor
+METHOD	bT	()Ljava/util/List;	h	getPredExceptions
+METHOD	bT	(LbT;)V	h	addPredecessorException
+METHOD	bT	(LbT;)V	i	removePredecessorException
+FIELD	bT	I	a	id
+FIELD	bT	I	b	mark
+FIELD	bT	LcQ;	c	seq
+FIELD	bT	Ljava/util/List;	d	preds
+FIELD	bT	Ljava/util/List;	e	succs
+FIELD	bT	Ljava/util/List;	f	instrOldOffsets
+FIELD	bT	Ljava/util/List;	g	predExceptions
+FIELD	bT	Ljava/util/List;	h	succExceptions
+CLASS	bU	de/fernflower/modules/decompiler/FinallyProcessor
+METHOD	bU	(LbT;II)V	a	removeExceptionInstructionsEx
+METHOD	bU	(Lbn;LS;LcI;)Z	a	processStatementEx
+METHOD	bU	(Lbn;LS;Lh;)[Ljava/lang/Object;	a	getFinallyInformation
+METHOD	bU	(LcI;LbT;LbT;)V	a	insertBlockBefore
+METHOD	bU	(LcI;LbT;LbT;IILjava/util/List;)Z	a	compareBasicBlocksEx
+METHOD	bU	(LcI;LbT;Ljava/util/HashSet;LbT;ILjava/util/HashMap;Z)[Ljava/lang/Object;	a	compareSubgraphsEx
+METHOD	bU	(LcI;Lh;[Ljava/lang/Object;)Z	a	verifyFinallyEx
+METHOD	bU	(LcI;Ljava/util/HashSet;)LbT;	a	getUniqueNext
+METHOD	bU	(LcI;Ljava/util/HashSet;LbT;LbT;I[Ljava/lang/Object;)V	a	insertSemaphore
+METHOD	bU	(LcI;[Ljava/lang/Object;)V	a	deleteArea
+METHOD	bU	(Lca;)Ljava/util/HashSet;	a	getAllBasicBlocks
+FIELD	bU	Ljava/util/HashMap;	a	finallyBlockIDs
+FIELD	bU	Ljava/util/HashMap;	b	catchallBlockIDs
+FIELD	bU	Lce;	c	varprocessor
+CLASS	bV	de/fernflower/modules/decompiler/sforms/DirectGraph$ExprentIterator
+METHOD	bV	(LaJ;)I	a	processExprent
+CLASS	bW	de/fernflower/struct/StructClass
+METHOD	bW	()V	a	releaseResources
+METHOD	bW	(I)Ljava/lang/String;	a	getInterface
+METHOD	bW	(Lcw;)V	a	initStruct
+METHOD	bW	(Ljava/lang/String;Ljava/lang/String;)LbA;	a	getField
+METHOD	bW	()LbK;	b	getPool
+METHOD	bW	(Lcw;)LcE;	b	readAttributes
+METHOD	bW	(Ljava/lang/String;Ljava/lang/String;)Lbn;	b	getMethod
+METHOD	bW	()[I	c	getInterfaces
+METHOD	bW	()[Ljava/lang/String;	d	getInterfaceNames
+METHOD	bW	()LcE;	e	getMethods
+METHOD	bW	()LcE;	f	getFields
+METHOD	bW	()LcE;	g	getAttributes
+METHOD	bW	()Z	h	isOwn
+METHOD	bW	()Lcz;	i	getLoader
+FIELD	bW	I	a	minor_version
+FIELD	bW	I	b	major_version
+FIELD	bW	I	c	access_flags
+FIELD	bW	I	d	this_class
+FIELD	bW	LT;	e	superClass
+FIELD	bW	Ljava/lang/String;	f	qualifiedName
+FIELD	bW	I	g	super_class
+FIELD	bW	LT;	h	thisClass
+FIELD	bW	LbK;	i	pool
+FIELD	bW	[I	j	interfaces
+FIELD	bW	[Ljava/lang/String;	k	interfaceNames
+FIELD	bW	LcE;	l	fields
+FIELD	bW	LcE;	m	methods
+FIELD	bW	LcE;	n	attributes
+FIELD	bW	Z	o	own
+FIELD	bW	Lcz;	p	loader
+CLASS	bX	de/fernflower/modules/decompiler/StrongConnectivityHelper
+METHOD	bX	()Ljava/util/List;	a	getComponents
+METHOD	bX	(Lca;)Ljava/util/List;	a	findComponents
+METHOD	bX	(Ljava/util/List;)Z	a	isExitComponent
+METHOD	bX	(Lca;)V	b	visitTree
+METHOD	bX	(Ljava/util/List;)Ljava/util/List;	b	getExitReps
+METHOD	bX	(Lca;)V	c	visit
+FIELD	bX	Lcb;	a	lstack
+FIELD	bX	I	b	ncounter
+FIELD	bX	Ljava/util/HashSet;	c	tset
+FIELD	bX	Ljava/util/HashMap;	d	dfsnummap
+FIELD	bX	Ljava/util/HashMap;	e	lowmap
+FIELD	bX	Ljava/util/List;	f	components
+FIELD	bX	Ljava/util/HashSet;	g	setProcessed
+CLASS	bY	de/fernflower/code/optinstructions/ASTORE
+CLASS	bZ	de/fernflower/util/SFormsFastMapDirect
+METHOD	bZ	()LbZ;	a	getCopy
+METHOD	bZ	(I)Z	a	containsKey
+METHOD	bZ	(IIZ)[LcJ;	a	ensureCapacity
+METHOD	bZ	(ILcJ;)V	a	putInternal
+METHOD	bZ	(LbZ;)V	a	complement
+METHOD	bZ	([IIII)V	a	changeNext
+METHOD	bZ	()I	b	size
+METHOD	bZ	(I)LcJ;	b	get
+METHOD	bZ	(LbZ;)V	b	intersection
+METHOD	bZ	()Z	c	isEmpty
+METHOD	bZ	(LbZ;)V	c	union
+METHOD	bZ	()V	d	removeAllFields
+METHOD	bZ	()Ljava/util/List;	e	entryList
+FIELD	bZ	I	a	size
+FIELD	bZ	[[LcJ;	b	elements
+FIELD	bZ	[[I	c	next
+CLASS	ba	de/fernflower/modules/decompiler/vars/VarVersionsProcessor$2
+METHOD	ba	(LaJ;)I	a	processExprent
+FIELD	ba	Ljava/util/HashMap;	a	val$mapMergedVersions
+CLASS	bb	de/fernflower/modules/decompiler/vars/VarVersionsProcessor$1
+METHOD	bb	(LaJ;)I	a	processExprent
+FIELD	bb	Ljava/util/HashMap;	a	val$phivers
+CLASS	bc	de/fernflower/modules/decompiler/vars/VarVersionsProcessor$3
+METHOD	bc	(LaJ;)I	a	processExprent
+FIELD	bc	Ljava/util/HashMap;	a	val$mapVarPaar
+FIELD	bc	Ljava/util/HashMap;	b	val$mapExprentMaxTypes
+CLASS	bd	de/fernflower/modules/decompiler/StackVarsProcessor
+METHOD	bd	(LS;Lbn;)V	a	simplifyStackVars
+METHOD	bd	(LS;Ls;)Z	a	iterateStatements
+METHOD	bd	(LaJ;)V	a	setExprentVersionsToNull
+METHOD	bd	(LaJ;LaJ;LaJ;Ljava/util/HashMap;Ls;)[Ljava/lang/Object;	a	iterateChildExprent
+METHOD	bd	(LaJ;Laa;LaJ;Ls;)V	a	replaceSingleVar
+METHOD	bd	(Lca;)V	a	setVersionsToNull
+METHOD	bd	(Lde;LaJ;Ls;)Ljava/util/HashMap;	a	getAllVarVersions
+METHOD	bd	(Lde;Ljava/util/HashMap;Ls;Lde;)Z	a	isVersionToBeReplaced
+METHOD	bd	(Ljava/util/List;ILaJ;Ljava/util/HashMap;Ls;)[I	a	iterateExprent
+METHOD	bd	(Ls;Lde;Ljava/util/List;)Z	a	getUsedVersions
+METHOD	bd	(LaJ;)Ljava/util/HashSet;	b	getAllVersions
+CLASS	be	de/fernflower/code/optinstructions/CHECKCAST
+CLASS	bf	de/fernflower/code/ExceptionTable
+METHOD	bf	()Ljava/util/List;	a	getHandlers
+FIELD	bf	Ljava/util/List;	a	handlers
+CLASS	bg	de/fernflower/code/optinstructions/RET
+CLASS	bh	de/fernflower/modules/decompiler/decompose/FastExtendedPostdominanceHelper$3
+METHOD	bh	(Lca;Ljava/util/HashMap;)Z	a	action
+FIELD	bh	Lan;	a	this$0
+FIELD	bh	I	b	val$edgetype
+CLASS	bi	de/fernflower/struct/attr/StructExceptionsAttribute
+METHOD	bi	()Ljava/util/List;	a	getThrowsExceptions
+METHOD	bi	(ILbK;)Ljava/lang/String;	a	getExcClassname
+METHOD	bi	(LbK;)V	a	initContent
+FIELD	bi	Ljava/util/List;	c	throwsExceptions
+CLASS	bj	de/fernflower/code/IfInstruction
+CLASS	bk	de/fernflower/code/SimpleInstructionSequence
+METHOD	bk	()LcQ;	a	clone
+METHOD	bk	(I)V	a	removeInstruction
+CLASS	bl	de/fernflower/modules/decompiler/decompose/FastExtendedPostdominanceHelper$2
+METHOD	bl	(Lca;Ljava/util/HashMap;)Z	a	action
+FIELD	bl	Lan;	a	this$0
+CLASS	bm	de/fernflower/modules/decompiler/decompose/FastExtendedPostdominanceHelper$1
+METHOD	bm	(Lca;Ljava/util/HashMap;)Z	a	action
+FIELD	bm	Lan;	a	this$0
+CLASS	bn	de/fernflower/struct/StructMethod
+METHOD	bn	()V	a	expandData
+METHOD	bn	(Lcw;ILbK;)LcQ;	a	parseBytecode
+METHOD	bn	(Lcw;LbK;LcE;ILjava/lang/String;)V	a	readAttribute
+METHOD	bn	()V	b	releaseResources
+METHOD	bn	()LcQ;	c	getInstructionSequence
+METHOD	bn	()Ljava/lang/String;	d	getDescriptor
+METHOD	bn	()Ljava/lang/String;	e	getName
+METHOD	bn	()I	f	getAccessFlags
+METHOD	bn	()I	g	getLocalVariables
+METHOD	bn	()LcE;	h	getAttributes
+METHOD	bn	()LbW;	i	getClassStruct
+FIELD	bn	I	a	name_index
+FIELD	bn	I	b	descriptor_index
+FIELD	bn	[I	c	opr_iconst
+FIELD	bn	[I	d	opr_loadstore
+FIELD	bn	[I	f	opcs_load
+FIELD	bn	[I	g	opcs_store
+FIELD	bn	I	h	accessFlags
+FIELD	bn	LcE;	i	attributes
+FIELD	bn	I	j	localVariables
+FIELD	bn	Ljava/lang/String;	k	name
+FIELD	bn	Ljava/lang/String;	l	descriptor
+FIELD	bn	LcQ;	m	seq
+FIELD	bn	Z	n	containsCode
+FIELD	bn	Z	o	own
+FIELD	bn	LbW;	p	classStruct
+FIELD	bn	Z	q	lazy
+FIELD	bn	Z	r	expanded
+FIELD	bn	I	s	code_length
+FIELD	bn	I	t	code_fulllength
+CLASS	bo	de/fernflower/code/optinstructions/NEW
+CLASS	bp	de/fernflower/modules/decompiler/exps/MonitorExprent
+METHOD	bp	()LaJ;	a	copy
+METHOD	bp	(I)Ljava/lang/String;	a	toJava
+METHOD	bp	(LaJ;LaJ;)V	a	replaceExprent
+METHOD	bp	()Ljava/util/List;	b	getAllExprents
+METHOD	bp	()I	g	getMontype
+METHOD	bp	()LaJ;	h	getValue
+FIELD	bp	I	c	montype
+FIELD	bp	LaJ;	d	value
+CLASS	bq	de/fernflower/modules/decompiler/decompose/DominatorTreeExceptionFilter
+METHOD	bq	()V	a	initialize
+METHOD	bq	(Ljava/lang/Integer;)Ljava/util/Map;	a	buildExceptionDoms
+METHOD	bq	(Ljava/lang/Integer;Ljava/lang/Integer;)Z	a	acceptStatementPair
+METHOD	bq	()Lay;	b	getDomEngine
+METHOD	bq	(Ljava/lang/Integer;)V	b	buildFilter
+METHOD	bq	()V	c	buildExceptionRanges
+FIELD	bq	Lca;	a	statement
+FIELD	bq	Ljava/util/Map;	b	mapTreeBranches
+FIELD	bq	Ljava/util/Map;	c	mapExceptionRanges
+FIELD	bq	Ljava/util/Map;	d	mapExceptionDoms
+FIELD	bq	Ljava/util/Map;	e	mapExceptionRangeUniqueExit
+FIELD	bq	Lay;	f	domEngine
+CLASS	br	de/fernflower/code/SwitchInstruction
+METHOD	br	(LcQ;)V	a	initInstruction
+METHOD	br	()Lj;	b	clone
+METHOD	br	()[I	d	getDestinations
+METHOD	br	()I	e	getDefaultdest
+METHOD	br	()[I	f	getValues
+FIELD	br	[I	d	destinations
+FIELD	br	[I	f	values
+FIELD	br	I	g	defaultdest
+CLASS	bs	de/fernflower/modules/decompiler/ExprentStack
+METHOD	bs	()LaJ;	a	pop
+METHOD	bs	(LaJ;)LaJ;	a	push
+METHOD	bs	(Ljava/lang/Object;)Ljava/lang/Object;	a	push
+METHOD	bs	()Lbs;	b	clone
+METHOD	bs	()Lcb;	c	clone
+METHOD	bs	()Ljava/lang/Object;	d	pop
+CLASS	bt	de/fernflower/modules/decompiler/ExitHelper
+METHOD	bt	(LS;)Z	a	condenseExits
+METHOD	bt	(LcV;)Lca;	a	isExitEdge
+METHOD	bt	(Lca;)V	a	cleanUpUnreachableBlocks
+METHOD	bt	(LS;)Z	b	removeRedundantReturns
+METHOD	bt	(Lca;)I	b	integrateExits
+CLASS	bu	de/fernflower/code/optinstructions/FLOAD
+CLASS	bv	de/fernflower/struct/gen/generics/GenericFieldDescriptor
+FIELD	bv	Lw;	a	type
+CLASS	bw	de/fernflower/code/instructions/MULTIANEWARRAY
+CLASS	by	de/fernflower/struct/consts/PooledConstant
+METHOD	by	(LbK;)V	a	resolveConstant
+FIELD	by	I	d	type
+CLASS	bz	de/fernflower/struct/attr/StructGeneralAttribute
+METHOD	bz	(ILjava/lang/String;)Lbz;	a	getMatchingAttributeInstance
+METHOD	bz	(LbK;)V	a	initContent
+METHOD	bz	([B)V	a	setInfo
+METHOD	bz	()Ljava/lang/String;	d	getName
+FIELD	bz	[B	a	info
+FIELD	bz	Ljava/lang/String;	b	name
+FIELD	bz	I	c	attribute_name_index
+CLASS	c	de/fernflower/modules/decompiler/decompose/GenericDominatorEngine
+METHOD	c	()V	a	orderNodes
+METHOD	c	(Lah;Lah;)Z	a	isDominator
+FIELD	c	Lak;	a	graph
+FIELD	c	LcE;	b	colOrderedIDoms
+FIELD	c	Ljava/util/Set;	c	setRoots
+CLASS	cA	de/fernflower/main/rels/NestedMemberAccess
+METHOD	cA	(LaK;)V	a	propagateMemberAccess
+METHOD	cA	(LaK;LaK;)Z	a	sameTree
+METHOD	cA	(LaK;LcX;)V	a	computeMethodType
+METHOD	cA	(LaK;LcX;LaJ;)Z	a	replaceInvocations
+METHOD	cA	(LaK;LcX;LcR;)LaJ;	a	replaceAccessExprent
+METHOD	cA	(LaK;)V	b	computeMethodTypes
+METHOD	cA	(LaK;)V	c	eliminateStaticAccess
+FIELD	cA	Z	a	notSetSync
+FIELD	cA	Ljava/util/HashMap;	b	mapMethodType
+CLASS	cB	de/fernflower/modules/decompiler/DomHelper$1
+FIELD	cB	Ljava/util/HashMap;	a	val$mapSortOrder
+CLASS	cC	de/fernflower/modules/decompiler/MergeHelper
+METHOD	cC	(Lau;)Z	a	matchDoWhile
+METHOD	cC	(Lau;Lca;)V	a	removeLastEmptyStatement
+METHOD	cC	(Lca;)V	a	enhanceLoops
+METHOD	cC	(Lca;Lca;)Z	a	isDirectPath
+METHOD	cC	(Lau;)Z	b	matchFor
+METHOD	cC	(Lca;)Z	b	matchWhile
+METHOD	cC	(Lca;)Lca;	c	getLastDirectData
+CLASS	cD	de/fernflower/struct/gen/generics/GenericClassDescriptor
+FIELD	cD	Lw;	a	superclass
+FIELD	cD	Ljava/util/List;	b	superinterfaces
+FIELD	cD	Ljava/util/List;	c	fparameters
+FIELD	cD	Ljava/util/List;	d	fbounds
+CLASS	cE	de/fernflower/util/VBStyleCollection
+METHOD	cE	()Ljava/lang/Object;	a	getLast
+METHOD	cE	(I)Ljava/lang/Object;	a	getKey
+METHOD	cE	(II)V	a	addToListIndex
+METHOD	cE	(ILjava/lang/Object;Ljava/lang/Object;)V	a	addWithKeyAndIndex
+METHOD	cE	(Ljava/lang/Object;)V	a	removeWithKey
+METHOD	cE	(Ljava/lang/Object;Ljava/lang/Object;)V	a	addWithKey
+METHOD	cE	(Ljava/util/Collection;Ljava/util/Collection;)V	a	addAllWithKey
+METHOD	cE	()LcE;	b	clone
+METHOD	cE	(Ljava/lang/Object;)Ljava/lang/Object;	b	getWithKey
+METHOD	cE	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;	b	putWithKey
+METHOD	cE	()Ljava/util/ArrayList;	c	getLstKeys
+METHOD	cE	(Ljava/lang/Object;)I	c	getIndexByKey
+METHOD	cE	(Ljava/lang/Object;)Z	d	containsKey
+FIELD	cE	Ljava/util/HashMap;	a	map
+FIELD	cE	Ljava/util/ArrayList;	b	lstKeys
+CLASS	cF	de/fernflower/modules/decompiler/sforms/DirectNode
+FIELD	cF	I	a	type
+FIELD	cF	Ljava/lang/String;	b	id
+FIELD	cF	Lci;	c	block
+FIELD	cF	Lca;	d	statement
+FIELD	cF	Ljava/util/List;	e	exprents
+FIELD	cF	Ljava/util/List;	f	succs
+FIELD	cF	Ljava/util/List;	g	preds
+CLASS	cG	de/fernflower/main/ClassesProcessor
+METHOD	cG	()Ljava/util/HashMap;	a	getMapRootClasses
+METHOD	cG	(LaK;)V	a	initWrappers
+METHOD	cG	(LaK;LcL;)V	a	addClassnameToImport
+METHOD	cG	(LbW;Ljava/io/BufferedWriter;)V	a	writeClass
+METHOD	cG	(LaK;)V	b	destroyWrappers
+FIELD	cG	Ljava/util/HashMap;	a	mapRootClasses
+CLASS	cH	de/fernflower/modules/decompiler/IfHelper
+METHOD	cH	(LG;)Z	a	reorderIf
+METHOD	cH	(LS;)Z	a	mergeAllIfs
+METHOD	cH	(Lca;)Lca;	a	getNextStatement
+METHOD	cH	(Lca;Lca;)Z	a	hasDirectEndEdge
+METHOD	cH	(Lca;Ljava/util/HashSet;)Z	a	mergeIfs
+METHOD	cH	(Lcy;)Z	a	collapseElse
+METHOD	cH	(Lca;Lca;)Z	b	existsPath
+METHOD	cH	(Lca;Ljava/util/HashSet;)Z	b	mergeAllIfsRec
+CLASS	cI	de/fernflower/code/cfg/ControlFlowGraph
+METHOD	cI	()Ljava/util/List;	a	getReversePostOrder
+METHOD	cI	(LbK;LbT;LaR;)V	a	removeJsrInstructions
+METHOD	cI	(LbT;)V	a	removeBlock
+METHOD	cI	(LbT;LbT;)Lai;	a	getExceptionRange
+METHOD	cI	(LbT;LbT;Ljava/util/HashSet;)V	a	splitJsrRange
+METHOD	cI	(LbT;Ljava/util/List;)V	a	addToReversePostOrderListIterative
+METHOD	cI	(Lbn;)V	a	inlineJsr
+METHOD	cI	(LcQ;)[S	a	findStartInstructions
+METHOD	cI	(LcQ;Ljava/util/HashMap;)V	a	setExceptionEdges
+METHOD	cI	(Ljava/util/HashSet;Ljava/util/HashMap;)V	a	splitJsrExceptionRanges
+METHOD	cI	(Ljava/util/List;Ljava/util/HashMap;)V	a	connectBlocks
+METHOD	cI	([SLcQ;Ljava/util/HashMap;)LcE;	a	createBasicBlocks
+METHOD	cI	()LcE;	b	getBlocks
+METHOD	cI	(LbT;)V	b	setFirst
+METHOD	cI	(LbT;LbT;)Ljava/util/HashSet;	b	getJsrRange
+METHOD	cI	()LbT;	c	getFirst
+METHOD	cI	()Ljava/util/List;	d	getExceptions
+METHOD	cI	()LbT;	e	getLast
+METHOD	cI	()Ljava/util/HashSet;	f	getFinallyExits
+METHOD	cI	()V	g	removeMarkers
+METHOD	cI	()V	h	setSubroutineEdges
+METHOD	cI	()V	i	setFirstAndLastBlocks
+FIELD	cI	I	a	last_id
+FIELD	cI	LcE;	b	blocks
+FIELD	cI	LbT;	c	first
+FIELD	cI	LbT;	d	last
+FIELD	cI	Ljava/util/List;	f	exceptions
+FIELD	cI	Ljava/util/HashMap;	g	subroutines
+FIELD	cI	Ljava/util/HashSet;	h	finallyExits
+CLASS	cJ	de/fernflower/util/FastSparseSetFactory$FastSparseSet
+METHOD	cJ	()LcJ;	a	getCopy
+METHOD	cJ	(I)[I	a	ensureCapacity
+METHOD	cJ	(LcJ;)V	a	union
+METHOD	cJ	(Ljava/lang/Object;)V	a	add
+METHOD	cJ	([IIII)V	a	changeNext
+METHOD	cJ	()I	b	getCardinality
+METHOD	cJ	(LcJ;)V	b	intersection
+METHOD	cJ	(Ljava/lang/Object;)V	b	remove
+METHOD	cJ	()Z	c	isEmpty
+METHOD	cJ	(LcJ;)V	c	complement
+METHOD	cJ	(Ljava/lang/Object;)Z	c	contains
+METHOD	cJ	()LcM;	d	getFactory
+METHOD	cJ	(LcJ;)[I	d	access$0
+METHOD	cJ	(LcJ;)[I	e	access$1
+FIELD	cJ	LcM;	a	factory
+FIELD	cJ	LcE;	b	colValuesInternal
+FIELD	cJ	[I	c	data
+FIELD	cJ	[I	d	next
+CLASS	cK	de/fernflower/struct/attr/StructAnnotationParameterAttribute
+METHOD	cK	()Ljava/util/List;	a	getParamAnnotations
+METHOD	cK	(LbK;)V	a	initContent
+FIELD	cK	Ljava/util/List;	c	paramAnnotations
+CLASS	cL	de/fernflower/main/collectors/ImportCollector
+METHOD	cL	(Ljava/io/BufferedWriter;)V	a	writeImports
+METHOD	cL	(Ljava/lang/String;Z)Ljava/lang/String;	a	getShortName
+FIELD	cL	Ljava/util/HashMap;	a	mapSimpleNames
+FIELD	cL	Ljava/util/HashSet;	b	setNotImportedNames
+FIELD	cL	Ljava/lang/String;	c	currentPackageSlash
+FIELD	cL	Ljava/lang/String;	d	currentPackagePoint
+CLASS	cM	de/fernflower/util/FastSparseSetFactory
+METHOD	cM	()LcJ;	a	spawnEmptySet
+METHOD	cM	(LcM;)LcE;	a	access$0
+METHOD	cM	(LcM;Ljava/lang/Object;)[I	a	access$1
+METHOD	cM	()I	b	getLastBlock
+FIELD	cM	LcE;	a	colValuesInternal
+FIELD	cM	I	b	lastBlock
+FIELD	cM	I	c	lastMask
+CLASS	cN	de/fernflower/modules/decompiler/ConcatenationHelper
+METHOD	cN	(LaJ;)LaJ;	a	contractStringConcat
+FIELD	cN	LQ;	a	builderType
+FIELD	cN	LQ;	b	bufferType
+CLASS	cO	de/fernflower/modules/decompiler/SecondaryFunctionsHelper
+METHOD	cO	(LaJ;)LaJ;	a	propagateBoolNot
+METHOD	cO	(Lca;)Z	a	identifySecondaryFunctions
+METHOD	cO	(LaJ;)LaJ;	b	identifySecondaryFunctions
+FIELD	cO	[I	a	funcsnot
+FIELD	cO	Ljava/util/HashMap;	b	mapNumComparisons
+CLASS	cP	de/fernflower/util/InterpreterUtil
+METHOD	cP	(I)Ljava/lang/String;	a	getIndentString
+METHOD	cP	(Ljava/io/File;Ljava/io/File;)V	a	copyFile
+METHOD	cP	(Ljava/io/InputStream;Ljava/io/OutputStream;)V	a	copyInputStream
+METHOD	cP	(Ljava/lang/Object;Ljava/lang/Object;)Z	a	equalObjects
+METHOD	cP	(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;	a	makeUniqueKey
+METHOD	cP	(Ljava/util/List;Ljava/util/List;)Z	a	equalLists
+METHOD	cP	([Ljava/lang/Object;[Ljava/lang/Object;)Z	a	equalObjectArrays
+METHOD	cP	(I)Ljava/lang/String;	b	charToUnicodeLiteral
+CLASS	cQ	de/fernflower/code/InstructionSequence
+METHOD	cQ	()LcQ;	a	clone
+METHOD	cQ	(I)V	a	removeInstruction
+METHOD	cQ	(Lj;I)V	a	addInstruction
+METHOD	cQ	()V	b	clear
+METHOD	cQ	(I)Lj;	b	getInstr
+METHOD	cQ	()Lj;	c	getLastInstr
+METHOD	cQ	(I)I	c	getOffset
+METHOD	cQ	()I	d	length
+METHOD	cQ	(I)I	d	getPointerByAbsOffset
+METHOD	cQ	()Z	e	isEmpty
+METHOD	cQ	(I)I	e	getPointerByRelOffset
+METHOD	cQ	()V	f	addToPointer
+METHOD	cQ	(I)Ljava/lang/String;	f	toString
+METHOD	cQ	()I	g	getPointer
+METHOD	cQ	(I)V	g	setPointer
+METHOD	cQ	()Lbf;	h	getExceptionTable
+FIELD	cQ	LcE;	a	collinstr
+FIELD	cQ	Lbf;	b	exceptionTable
+FIELD	cQ	I	c	pointer
+CLASS	cR	de/fernflower/modules/decompiler/exps/InvocationExprent
+METHOD	cR	()LaJ;	a	copy
+METHOD	cR	(I)Ljava/lang/String;	a	toJava
+METHOD	cR	(LaJ;)V	a	setInstance
+METHOD	cR	(LaJ;LaJ;)V	a	replaceExprent
+METHOD	cR	(Lav;)V	a	setDescriptor
+METHOD	cR	(Ljava/lang/String;)V	a	setClassname
+METHOD	cR	(Ljava/util/List;)V	a	setLstParameters
+METHOD	cR	()Ljava/util/List;	b	getAllExprents
+METHOD	cR	(Ljava/lang/String;)V	b	setName
+METHOD	cR	()LQ;	c	getExprType
+METHOD	cR	(Ljava/lang/String;)V	c	setStringDescriptor
+METHOD	cR	()LaM;	e	checkExprTypeBounds
+METHOD	cR	()Ljava/util/List;	g	getLstParameters
+METHOD	cR	()Lav;	h	getDescriptor
+METHOD	cR	()Ljava/lang/String;	i	getClassname
+METHOD	cR	()I	j	getFunctype
+METHOD	cR	()V	k	setFunctype
+METHOD	cR	()LaJ;	l	getInstance
+METHOD	cR	()Z	m	isStatic
+METHOD	cR	()V	n	setStatic
+METHOD	cR	()Ljava/lang/String;	o	getName
+METHOD	cR	()Ljava/lang/String;	q	getStringDescriptor
+METHOD	cR	()Ljava/util/Set;	r	getAmbiguousParameters
+FIELD	cR	Ljava/lang/String;	c	name
+FIELD	cR	Ljava/lang/String;	d	classname
+FIELD	cR	Z	e	isStatic
+FIELD	cR	I	f	functype
+FIELD	cR	LaJ;	g	instance
+FIELD	cR	Lav;	h	descriptor
+FIELD	cR	Ljava/lang/String;	i	stringDescriptor
+FIELD	cR	I	j	invocationTyp
+FIELD	cR	Ljava/util/List;	k	lstParameters
+CLASS	cS	de/fernflower/struct/gen/generics/GenericMain
+METHOD	cS	(Ljava/lang/String;)LcD;	a	parseClassSignature
+METHOD	cS	(Ljava/lang/String;Ljava/util/List;Ljava/util/List;)Ljava/lang/String;	a	parseFormalParameters
+METHOD	cS	(Lw;)Ljava/lang/String;	a	getTypeName
+METHOD	cS	(Ljava/lang/String;)Lbv;	b	parseFieldSignature
+METHOD	cS	(Lw;)Ljava/lang/String;	b	buildJavaClassName
+METHOD	cS	(Ljava/lang/String;)LbQ;	c	parseMethodSignature
+FIELD	cS	[Ljava/lang/String;	a	typeNames
+CLASS	cT	de/fernflower/struct/attr/StructInnerClassesAttribute
+METHOD	cT	()Ljava/util/List;	a	getClassentries
+METHOD	cT	(LbK;)V	a	initContent
+METHOD	cT	()Ljava/util/List;	b	getStringentries
+FIELD	cT	Ljava/util/List;	c	classentries
+FIELD	cT	Ljava/util/List;	d	stringentries
+CLASS	cU	de/fernflower/modules/decompiler/LoopExtractHelper
+METHOD	cU	(Lau;LG;)V	a	extractIfBlock
+METHOD	cU	(Lau;Lca;Lca;)Z	a	isExternStatement
+METHOD	cU	(Lca;)Z	a	extractLoops
+METHOD	cU	(Lca;)I	b	extractLoopsRec
+CLASS	cV	de/fernflower/modules/decompiler/StatEdge
+METHOD	cV	()I	a	getType
+METHOD	cV	(I)V	a	setType
+METHOD	cV	(Lca;)V	a	setSource
+METHOD	cV	()Lca;	b	getSource
+METHOD	cV	(Lca;)V	b	setDestination
+METHOD	cV	()Lca;	c	getDestination
+METHOD	cV	()Ljava/lang/String;	d	getException
+FIELD	cV	[I	a	TYPES
+FIELD	cV	Lca;	b	closure
+FIELD	cV	Z	c	labeled
+FIELD	cV	Z	d	explicit
+FIELD	cV	I	e	type
+FIELD	cV	Lca;	f	source
+FIELD	cV	Lca;	g	destination
+FIELD	cV	Ljava/lang/String;	h	exception
+CLASS	cW	de/fernflower/modules/decompiler/stats/CatchStatement
+METHOD	cW	()Lca;	a	getSimpleCopy
+METHOD	cW	(I)Ljava/lang/String;	a	toJava
+METHOD	cW	(Lca;)Lca;	a	isHead
+METHOD	cW	()Ljava/util/List;	e	getVars
+FIELD	cW	Ljava/util/List;	a	exctstrings
+FIELD	cW	Ljava/util/List;	b	vars
+CLASS	cX	de/fernflower/main/rels/MethodWrapper
+METHOD	cX	()Lq;	a	getOrBuildGraph
+FIELD	cX	LS;	a	root
+FIELD	cX	Lce;	b	varproc
+FIELD	cX	Lbn;	c	methodStruct
+FIELD	cX	LaI;	d	counter
+FIELD	cX	Ljava/util/List;	e	signatureFields
+FIELD	cX	Z	f	decompiledWithErrors
+FIELD	cX	Ljava/util/HashSet;	g	setOuterVarNames
+FIELD	cX	Lq;	h	graph
+CLASS	cY	de/fernflower/code/optinstructions/ANEWARRAY
+CLASS	cZ	de/fernflower/struct/ContextUnit
+METHOD	cZ	()V	a	save
+METHOD	cZ	(LbW;Ljava/lang/String;)V	a	addClass
+METHOD	cZ	(Lcz;)V	a	reload
+METHOD	cZ	(Ljava/lang/String;)V	a	addDirEntry
+METHOD	cZ	(Ljava/lang/String;Ljava/lang/String;)V	a	addOtherEntry
+METHOD	cZ	(Ljava/util/jar/Manifest;)V	a	setManifest
+METHOD	cZ	()Z	b	isOwn
+METHOD	cZ	()Ljava/util/List;	c	getClasses
+FIELD	cZ	I	a	type
+FIELD	cZ	Ljava/lang/String;	b	archivepath
+FIELD	cZ	Ljava/lang/String;	c	filename
+FIELD	cZ	Ljava/util/List;	d	classes
+FIELD	cZ	Ljava/util/List;	e	classentries
+FIELD	cZ	Ljava/util/List;	f	direntries
+FIELD	cZ	Ljava/util/List;	g	otherentries
+FIELD	cZ	Ljava/util/jar/Manifest;	h	manifest
+FIELD	cZ	Lde/fernflower/main/extern/IDecompilatSaver;	i	decompilatSaver
+FIELD	cZ	Lcl;	j	decompiledData
+FIELD	cZ	Z	k	own
+CLASS	ca	de/fernflower/modules/decompiler/stats/Statement
+METHOD	ca	()Z	A	hasBasicSuccEdge
+METHOD	ca	()Lca;	B	getParent
+METHOD	ca	()Ljava/util/HashSet;	C	getLabelEdges
+METHOD	ca	()Ljava/util/List;	D	getVarDefinitions
+METHOD	ca	()Ljava/util/List;	E	getExprents
+METHOD	ca	()Z	F	isCopied
+METHOD	ca	()V	G	setCopied
+METHOD	ca	()Lca;	a	getSimpleCopy
+METHOD	ca	(I)Ljava/lang/String;	a	toJava
+METHOD	ca	(II)Ljava/util/List;	a	getNeighbours
+METHOD	ca	(ILcV;)V	a	addEdgeInternal
+METHOD	ca	(ILcV;I)V	a	changeEdgeType
+METHOD	ca	(ILcV;Lca;)V	a	changeEdgeNode
+METHOD	ca	(LaJ;LaJ;)V	a	replaceExprent
+METHOD	ca	(Lca;Lca;)V	a	replaceStatement
+METHOD	ca	(Lca;Ljava/util/List;)V	a	addToReversePostOrderListIterative
+METHOD	ca	(Lca;Ljava/util/List;Ljava/util/HashSet;)V	a	addToPostReversePostOrderList
+METHOD	ca	(Ljava/util/List;)Ljava/util/List;	a	getPostReversePostOrderList
+METHOD	ca	()V	b	initSimpleCopy
+METHOD	ca	(II)Ljava/util/Set;	b	getNeighboursSet
+METHOD	ca	(ILcV;)V	b	removeEdgeInternal
+METHOD	ca	(ILcV;I)V	b	addEdgeDirectInternal
+METHOD	ca	(Ljava/util/List;)V	b	setExprents
+METHOD	ca	(I)Ljava/util/List;	c	getSuccessorEdges
+METHOD	ca	(II)Ljava/util/List;	c	getEdges
+METHOD	ca	(ILcV;I)V	c	removeEdgeDirectInternal
+METHOD	ca	(LcV;)V	c	addLabeledEdge
+METHOD	ca	()Ljava/util/List;	d	getSequentialObjects
+METHOD	ca	(I)Ljava/util/List;	d	getPredecessorEdges
+METHOD	ca	(LcV;)V	d	addPredecessor
+METHOD	ca	(Lca;)V	d	collapseNodesToStatement
+METHOD	ca	(LcV;)V	e	removePredecessor
+METHOD	ca	(Lca;)V	e	removeAllSuccessors
+METHOD	ca	()V	e_	initExprents
+METHOD	ca	(LcV;)V	f	addSuccessor
+METHOD	ca	(Lca;)Z	f	containsStatement
+METHOD	ca	(LcV;)V	g	removeSuccessor
+METHOD	ca	(Lca;)Z	g	containsStatementStrict
+METHOD	ca	(Lca;)V	h	setFirst
+METHOD	ca	(Lca;)V	i	setParent
+METHOD	ca	()V	l	clearTempInformation
+METHOD	ca	()V	m	setAllParent
+METHOD	ca	()Ljava/util/HashSet;	n	buildContinueSet
+METHOD	ca	()V	o	buildMonitorFlags
+METHOD	ca	()Ljava/util/List;	p	getReversePostOrderList
+METHOD	ca	()Ljava/util/List;	q	getAllSuccessorEdges
+METHOD	ca	()Ljava/util/List;	r	getAllPredecessorEdges
+METHOD	ca	()Lca;	s	getFirst
+METHOD	ca	()LcE;	t	getStats
+METHOD	ca	()I	u	getLastBasicType
+METHOD	ca	()Ljava/util/HashSet;	v	getContinueSet
+METHOD	ca	()Z	w	isContainsMonitorExit
+METHOD	ca	()Z	x	isMonitorEnter
+METHOD	ca	()Lci;	y	getBasichead
+METHOD	ca	()Z	z	isLabeled
+FIELD	ca	Ljava/util/Map;	a	mapSuccEdges
+FIELD	ca	Ljava/util/Map;	b	mapPredEdges
+FIELD	ca	I	c	type
+FIELD	ca	Ljava/lang/Integer;	d	id
+FIELD	ca	LcE;	e	stats
+FIELD	ca	Lca;	f	first
+FIELD	ca	Ljava/util/List;	g	exprents
+FIELD	ca	Ljava/util/List;	h	varDefinitions
+FIELD	ca	Lca;	i	post
+FIELD	ca	I	j	lastBasicType
+FIELD	ca	Ljava/util/Map;	k	mapSuccStates
+FIELD	ca	Ljava/util/Map;	l	mapPredStates
+FIELD	ca	Lca;	m	parent
+FIELD	ca	Ljava/util/HashSet;	n	labelEdges
+FIELD	ca	Z	o	copied
+FIELD	ca	Z	p	isMonitorEnter
+FIELD	ca	Z	q	containsMonitorExit
+FIELD	ca	Ljava/util/HashSet;	r	continueSet
+CLASS	cb	de/fernflower/util/ListStack
+METHOD	cb	(I)Ljava/lang/Object;	a	pop
+METHOD	cb	(ILjava/lang/Object;)V	a	insertByOffset
+METHOD	cb	(Ljava/lang/Object;)Ljava/lang/Object;	a	push
+METHOD	cb	(I)V	b	removeMultiple
+METHOD	cb	()Lcb;	c	clone
+METHOD	cb	(I)Ljava/lang/Object;	c	getByOffset
+METHOD	cb	()Ljava/lang/Object;	d	pop
+METHOD	cb	()I	e	getPointer
+FIELD	cb	I	a	pointer
+CLASS	cc	de/fernflower/main/EnumProcessor
+METHOD	cc	(Lca;)Lca;	a	findFirstData
+METHOD	cc	(Lv;)V	a	clearEnum
+CLASS	cd	de/fernflower/code/optinstructions/FSTORE
+CLASS	ce	de/fernflower/modules/decompiler/vars/VarProcessor
+METHOD	ce	()Ljava/util/HashMap;	a	getThisvars
+METHOD	ce	(LS;)V	a	setVarVersions
+METHOD	ce	(LbS;)V	a	refreshVarNames
+METHOD	ce	(Lca;)V	a	setVarDefinitions
+METHOD	ce	(Lde;)LQ;	a	getVarType
+METHOD	ce	(Lde;LQ;)V	a	setVarType
+METHOD	ce	(Lde;Ljava/lang/String;)V	a	setVarName
+METHOD	ce	(Ljava/util/HashMap;)V	a	setDebugVarNames
+METHOD	ce	()Ljava/util/HashSet;	b	getExternvars
+METHOD	ce	(Lde;)Ljava/lang/String;	b	getVarName
+METHOD	ce	(Lde;)I	c	getVarFinal
+METHOD	ce	(Lde;)V	d	setVarFinal
+FIELD	ce	Ljava/util/HashMap;	a	mapVarNames
+FIELD	ce	Ld;	b	varvers
+FIELD	ce	Ljava/util/HashMap;	c	thisvars
+FIELD	ce	Ljava/util/HashSet;	d	externvars
+CLASS	cf	de/fernflower/modules/decompiler/PPandMMHelper
+METHOD	cf	(LS;)Z	a	findPPandMM
+METHOD	cf	(LaJ;)LaJ;	a	processExprentRecursive
+METHOD	cf	(Ljava/util/List;)Z	a	processExprentList
+FIELD	cf	Z	a	exprentReplaced
+CLASS	cg	de/fernflower/modules/decompiler/deobfuscator/ExceptionDeobfuscator
+METHOD	cg	(LcI;)V	a	restorePopRanges
+METHOD	cg	(LcI;)V	b	insertEmptyExceptionHandlerBlocks
+METHOD	cg	(LcI;)V	c	removeEmptyRanges
+METHOD	cg	(LcI;)V	d	removeCircularRanges
+METHOD	cg	(LcI;)Z	e	hasObfuscatedExceptions
+CLASS	ch	de/fernflower/modules/decompiler/exps/AnnotationExprent
+METHOD	ch	(I)Ljava/lang/String;	a	toJava
+METHOD	ch	()I	g	getAnnotationType
+METHOD	ch	()Ljava/lang/String;	h	getClassname
+FIELD	ch	Ljava/lang/String;	c	classname
+FIELD	ch	Ljava/util/List;	d	parnames
+FIELD	ch	Ljava/util/List;	e	parvalues
+CLASS	ci	de/fernflower/modules/decompiler/stats/BasicBlockStatement
+METHOD	ci	()Lca;	a	getSimpleCopy
+METHOD	ci	(I)Ljava/lang/String;	a	toJava
+METHOD	ci	()LbT;	e	getBlock
+FIELD	ci	LbT;	a	block
+CLASS	cj	de/fernflower/modules/decompiler/vars/VarDefinitionHelper
+METHOD	cj	()V	a	setVarDefinitions
+METHOD	cj	(LaJ;Ljava/lang/Integer;)Z	a	setDefinition
+METHOD	cj	(Lca;)Ljava/util/Set;	a	initStatement
+METHOD	cj	(Ljava/util/List;)Ljava/util/List;	a	getAllVars
+FIELD	cj	Ljava/util/HashMap;	a	mapVarDefStatements
+FIELD	cj	Ljava/util/HashMap;	b	mapStatementVars
+FIELD	cj	Ljava/util/HashSet;	c	implDefVars
+FIELD	cj	Lce;	d	varproc
+CLASS	ck	de/fernflower/main/rels/NestedClassProcessor$VarFieldPair
+FIELD	ck	Ljava/lang/String;	a	keyfield
+FIELD	ck	Lde;	b	varpaar
+CLASS	cl	de/fernflower/main/Fernflower
+METHOD	cl	()V	a	decompileContext
+METHOD	cl	(LbW;)Ljava/lang/String;	a	getClassContent
+METHOD	cl	(LbW;Ljava/lang/String;)Ljava/lang/String;	a	getClassEntryName
+METHOD	cl	()Li;	b	getStructcontext
+FIELD	cl	Li;	a	structcontext
+FIELD	cl	LcG;	b	clprocessor
+CLASS	cm	de/fernflower/util/SFormsFastMapDirect$1
+FIELD	cm	Ljava/lang/Integer;	a	var
+FIELD	cm	LcJ;	b	val
+CLASS	cn	de/fernflower/main/rels/NestedClassProcessor$2
+METHOD	cn	(LaJ;)I	a	processExprent
+METHOD	cn	(LaJ;)LaJ;	b	replaceExprent
+FIELD	cn	LaK;	a	val$child
+FIELD	cn	Ljava/util/HashMap;	b	val$mapFieldsToNewVars
+FIELD	cn	LcX;	c	val$meth
+FIELD	cn	Ljava/util/HashMap;	d	val$mapParamsToNewVars
+CLASS	co	de/fernflower/code/optinstructions/ALOAD
+CLASS	cp	de/fernflower/main/rels/NestedClassProcessor$1
+METHOD	cp	(LaJ;)I	a	processExprent
+FIELD	cp	Ljava/util/HashMap;	a	val$mapVarMasks
+FIELD	cp	LaK;	b	val$node
+FIELD	cp	Ljava/util/HashMap;	c	val$mapVarFieldPairs
+FIELD	cp	LcX;	d	val$meth
+CLASS	cq	de/fernflower/code/optinstructions/ILOAD
+CLASS	cr	de/fernflower/modules/decompiler/ClearStructHelper
+METHOD	cr	(LS;)V	a	clearStatements
+CLASS	cs	de/fernflower/code/optinstructions/NEWARRAY
+CLASS	ct	de/fernflower/code/optinstructions/DLOAD
+CLASS	cu	de/fernflower/modules/decompiler/vars/VarTypeProcessor
+METHOD	cu	()Ljava/util/HashMap;	a	getMapExprentMaxTypes
+METHOD	cu	(LS;Lq;)V	a	setInitVars
+METHOD	cu	(LaJ;)Z	a	checkTypeExprent
+METHOD	cu	(LaJ;LQ;I)Z	a	changeExprentType
+METHOD	cu	(Lcu;LaJ;)Z	a	access$0
+METHOD	cu	(Lde;)LQ;	a	getVarType
+METHOD	cu	(Lde;LQ;)V	a	setVarType
+METHOD	cu	()Ljava/util/HashMap;	b	getMapExprentMinTypes
+METHOD	cu	()Ljava/util/HashMap;	c	getMapFinalVars
+FIELD	cu	Ljava/util/HashMap;	a	mapExprentMinTypes
+FIELD	cu	Ljava/util/HashMap;	b	mapExprentMaxTypes
+FIELD	cu	Ljava/util/HashMap;	c	mapFinalVars
+CLASS	cv	de/fernflower/modules/decompiler/deobfuscator/IrreducibleCFGDeobfuscator$1Node
+FIELD	cv	Ljava/lang/Integer;	a	id
+FIELD	cv	Ljava/util/Set;	b	preds
+FIELD	cv	Ljava/util/Set;	c	succs
+CLASS	cw	de/fernflower/util/DataInputFullStream
+METHOD	cw	([B)I	a	readFull
+CLASS	cx	de/fernflower/modules/decompiler/stats/SequenceStatement
+METHOD	cx	()Lca;	a	getSimpleCopy
+METHOD	cx	(I)Ljava/lang/String;	a	toJava
+METHOD	cx	(Lca;)Lca;	a	isHead2Block
+CLASS	cy	de/fernflower/modules/decompiler/IfHelper$IfNode
+METHOD	cy	(Lcy;I)V	a	addChild
+FIELD	cy	Lca;	a	value
+FIELD	cy	Ljava/util/List;	b	succs
+FIELD	cy	Ljava/util/List;	c	edgetypes
+CLASS	cz	de/fernflower/struct/lazy/LazyLoader
+METHOD	cz	(Lbn;I)[B	a	loadBytecode
+METHOD	cz	(Lcw;)V	a	skipAttributes
+METHOD	cz	(Ljava/lang/String;)V	a	removeClassLink
+METHOD	cz	(Ljava/lang/String;LbM;)V	a	addClassLink
+METHOD	cz	(Ljava/lang/String;Ljava/lang/String;)Lcw;	a	getClassStream
+METHOD	cz	(Ljava/lang/String;)LbM;	b	getClassLink
+METHOD	cz	(Ljava/lang/String;)LbK;	c	loadPool
+METHOD	cz	(Ljava/lang/String;)Lcw;	d	getClassStream
+FIELD	cz	Ljava/util/HashMap;	a	mapClassLinks
+FIELD	cz	Lde/fernflower/main/extern/IBytecodeProvider;	b	provider
+CLASS	d	de/fernflower/modules/decompiler/vars/VarVersionsProcessor
+METHOD	d	()Ljava/util/HashMap;	a	getMapOriginalVarIndices
+METHOD	d	(LS;)V	a	setVarVersions
+METHOD	d	(Lcu;)V	a	eliminateNonJavaTypes
+METHOD	d	(Lcu;Lq;)V	a	simpleMerge
+METHOD	d	(Lde;)LQ;	a	getVarType
+METHOD	d	(Lde;LQ;)V	a	setVarType
+METHOD	d	(Lcu;Lq;)V	b	setNewVarIndices
+METHOD	d	(Lde;)I	b	getVarFinal
+METHOD	d	(Lde;)V	c	setVarFinal
+FIELD	d	Ljava/util/HashMap;	a	mapOriginalVarIndices
+FIELD	d	Lcu;	b	typeproc
+CLASS	da	de/fernflower/modules/decompiler/DecHelper
+METHOD	da	(Lca;)Ljava/util/HashSet;	a	getUniquePredExceptions
+METHOD	da	(Lca;Ljava/util/List;)Z	a	isChoiceStatement
+METHOD	da	(Ljava/util/List;)Z	a	checkStatementExceptions
+METHOD	da	(Ljava/util/List;)Ljava/util/List;	b	copyExprentList
+CLASS	db	de/fernflower/code/optinstructions/LDC
+CLASS	dc	de/fernflower/modules/renamer/IdentifierConverter
+METHOD	dc	()V	a	renameClasses
+METHOD	dc	(LV;Ljava/util/Map;Ljava/util/Set;)Ljava/util/Set;	a	renameClass
+METHOD	dc	(LbW;)Ljava/util/Map;	a	renameAllClasses
+METHOD	dc	(LbW;Ljava/util/Map;Ljava/util/Map;)V	a	renameClassIdentifiers
+METHOD	dc	(Li;)V	a	rename
+METHOD	dc	(Ljava/lang/String;Ljava/util/HashMap;)Ljava/util/Set;	a	processExternalInterface
+METHOD	dc	(Ljava/util/List;)Ljava/util/List;	a	getReversePostOrderListIterative
+METHOD	dc	(ZLjava/lang/String;)Ljava/lang/String;	a	buildNewDescriptor
+METHOD	dc	()V	c	renameInterfaces
+METHOD	dc	()V	e	buildInheritanceTree
+FIELD	dc	Li;	a	context
+FIELD	dc	Lde/fernflower/main/extern/IIdentifierRenamer;	b	helper
+FIELD	dc	Lu;	c	interceptor
+FIELD	dc	Ljava/util/List;	d	rootClasses
+FIELD	dc	Ljava/util/List;	e	rootInterfaces
+FIELD	dc	Ljava/util/Map;	f	interfaceNameMaps
+CLASS	dd	de/fernflower/modules/decompiler/sforms/FlattenStatementsHelper
+METHOD	dd	()Ljava/util/HashMap;	a	getMapDestinationNodes
+METHOD	dd	(LS;)Lq;	a	buildDirectGraph
+METHOD	dd	(LcF;Lca;ILcF;LcF;Lca;Lca;Z)V	a	saveEdge
+METHOD	dd	()V	b	setEdges
+FIELD	dd	Ljava/util/HashMap;	a	mapDestinationNodes
+FIELD	dd	Ljava/util/List;	b	listEdges
+FIELD	dd	Ljava/util/HashMap;	c	mapShortRangeFinallyPathIds
+FIELD	dd	Ljava/util/HashMap;	d	mapLongRangeFinallyPathIds
+FIELD	dd	Ljava/util/HashMap;	e	mapPosIfBranch
+FIELD	dd	Lq;	f	graph
+FIELD	dd	LS;	g	root
+CLASS	de	de/fernflower/modules/decompiler/vars/VarVersionPaar
+FIELD	de	I	a	var
+FIELD	de	I	b	version
+FIELD	de	I	c	hashCode
+METHOD	de/fernflower/main/decompiler/ConsoleDecompiler	()V	a	printHelp
+METHOD	de/fernflower/main/decompiler/ConsoleDecompiler	(Ljava/lang/String;)Ljava/lang/String;	a	getAbsolutePath
+METHOD	de/fernflower/main/decompiler/ConsoleDecompiler	(Ljava/lang/String;Ljava/lang/String;)Z	a	addEntryName
+FIELD	de/fernflower/main/decompiler/ConsoleDecompiler	Ljava/io/File;	a	root
+FIELD	de/fernflower/main/decompiler/ConsoleDecompiler	Lcl;	b	fernflower
+FIELD	de/fernflower/main/decompiler/ConsoleDecompiler	Ljava/util/HashMap;	c	mapArchiveStreams
+FIELD	de/fernflower/main/decompiler/ConsoleDecompiler	Ljava/util/HashMap;	d	mapArchiveEntries
+FIELD	de/fernflower/main/extern/IFernflowerLogger	I	DEBUG	TRACE
+CLASS	de/fernflower/main/extern/a	de/fernflower/main/extern/IFernflowerLogger$1
+CLASS	e	de/fernflower/modules/decompiler/stats/GeneralStatement
+METHOD	e	(I)Ljava/lang/String;	a	toJava
+CLASS	f	de/fernflower/code/optinstructions/GOTO
+CLASS	g	de/fernflower/struct/consts/LinkConstant
+METHOD	g	()V	a	initConstant
+METHOD	g	(LbK;)V	a	resolveConstant
+FIELD	g	Ljava/lang/String;	a	classname
+FIELD	g	Ljava/lang/String;	b	elementname
+FIELD	g	Ljava/lang/String;	c	descriptor
+FIELD	g	I	f	index1
+FIELD	g	I	g	index2
+CLASS	h	de/fernflower/modules/decompiler/stats/CatchAllStatement
+METHOD	h	()Lca;	a	getSimpleCopy
+METHOD	h	(I)Ljava/lang/String;	a	toJava
+METHOD	h	(Laa;)V	a	setMonitor
+METHOD	h	(Lca;)Lca;	a	isHead
+METHOD	h	(Lca;Lca;)V	a	replaceStatement
+METHOD	h	()Z	a_	isFinally
+METHOD	h	()V	b	initSimpleCopy
+METHOD	h	()Lca;	c	getHandler
+METHOD	h	()V	e	setFinally
+METHOD	h	()Laa;	f	getMonitor
+METHOD	h	()Ljava/util/List;	g	getVars
+FIELD	h	Lca;	a	handler
+FIELD	h	Z	b	isFinally
+FIELD	h	Laa;	k	monitor
+FIELD	h	Ljava/util/List;	l	vars
+CLASS	i	de/fernflower/struct/StructContext
+METHOD	i	()V	a	reloadContext
+METHOD	i	(Ljava/io/File;Z)V	a	addSpace
+METHOD	i	(Ljava/lang/String;)LbW;	a	getClass
+METHOD	i	(Ljava/lang/String;Ljava/io/File;IZ)V	a	addArchive
+METHOD	i	(Ljava/lang/String;Ljava/io/File;Z)V	a	addSpace
+METHOD	i	()V	b	saveContext
+METHOD	i	()Ljava/util/HashMap;	c	getClasses
+FIELD	i	Lcz;	a	loader
+FIELD	i	Ljava/util/HashMap;	b	classes
+FIELD	i	Ljava/util/HashMap;	c	units
+FIELD	i	LcZ;	d	defaultUnit
+FIELD	i	Lde/fernflower/main/extern/IDecompilatSaver;	e	saver
+FIELD	i	Lcl;	f	decdata
+CLASS	j	de/fernflower/code/Instruction
+METHOD	j	()I	a	operandsCount
+METHOD	j	(I)I	a	getOperand
+METHOD	j	(LcQ;)V	a	initInstruction
+METHOD	j	([I)V	a	setOperands
+METHOD	j	()Lj;	b	clone
+METHOD	j	()[I	c	getOperands
+FIELD	j	I	a	opcode
+FIELD	j	I	b	group
+FIELD	j	Z	c	wide
+FIELD	j	[I	d	operands
+CLASS	k	de/fernflower/modules/decompiler/sforms/FlattenStatementsHelper$Edge
+FIELD	k	Ljava/lang/String;	a	sourceid
+FIELD	k	Ljava/lang/Integer;	b	statid
+FIELD	k	I	c	edgetype
+CLASS	l	de/fernflower/modules/decompiler/sforms/FlattenStatementsHelper$FinallyPathWrapper
+FIELD	l	Ljava/lang/String;	a	source
+FIELD	l	Ljava/lang/String;	b	destination
+FIELD	l	Ljava/lang/String;	c	entry
+CLASS	m	de/fernflower/struct/attr/StructConstantValueAttribute
+METHOD	m	()I	a	getIndex
+METHOD	m	(LbK;)V	a	initContent
+FIELD	m	I	c	index
+CLASS	n	de/fernflower/code/optinstructions/JSR_W
+CLASS	o	de/fernflower/modules/decompiler/exps/IfExprent
+METHOD	o	()LaJ;	a	copy
+METHOD	o	(I)Ljava/lang/String;	a	toJava
+METHOD	o	(LaJ;)V	a	setCondition
+METHOD	o	(LaJ;LaJ;)V	a	replaceExprent
+METHOD	o	()Ljava/util/List;	b	getAllExprents
+METHOD	o	()Lo;	b_	negateIf
+METHOD	o	()LaJ;	d	getCondition
+FIELD	o	[I	c	functypes
+FIELD	o	LaJ;	d	condition
+CLASS	p	de/fernflower/util/FastFixedSetFactory$FastFixedSet
+METHOD	p	()Lp;	a	getCopy
+METHOD	p	(Ljava/lang/Object;)V	a	add
+METHOD	p	(Ljava/util/Collection;)V	a	addAll
+METHOD	p	(Lp;)Z	a	contains
+METHOD	p	()V	b	setAllElements
+METHOD	p	(Ljava/lang/Object;)V	b	remove
+METHOD	p	(Ljava/util/Collection;)Ljava/util/Collection;	b	toPlainCollection
+METHOD	p	(Lp;)V	b	union
+METHOD	p	()Z	c	isEmpty
+METHOD	p	(Ljava/lang/Object;)Z	c	contains
+METHOD	p	(Lp;)V	c	intersection
+METHOD	p	()Ljava/util/Set;	d	toPlainSet
+METHOD	p	(Lp;)V	d	complement
+METHOD	p	()Law;	e	getFactory
+METHOD	p	(Lp;)[I	e	access$0
+FIELD	p	Law;	a	factory
+FIELD	p	LcE;	b	colValuesInternal
+FIELD	p	[I	c	data
+CLASS	q	de/fernflower/modules/decompiler/sforms/DirectGraph
+METHOD	q	()V	a	sortReversePostOrder
+METHOD	q	(LbV;)Z	a	iterateExprents
+METHOD	q	(LcF;Ljava/util/List;)V	a	addToReversePostOrderListIterative
+FIELD	q	LcE;	a	nodes
+FIELD	q	LcF;	b	first
+FIELD	q	Ljava/util/HashMap;	c	mapShortRangeFinallyPaths
+FIELD	q	Ljava/util/HashMap;	d	mapLongRangeFinallyPaths
+FIELD	q	Ljava/util/HashMap;	e	mapNegIfBranch
+FIELD	q	Ljava/util/HashMap;	f	mapFinallyMonitorExceptionPathExits
+CLASS	r	de/fernflower/modules/code/DeadCodeHelper
+METHOD	r	(LcI;)V	a	removeDeadBlocks
+METHOD	r	(LcI;LbT;LbT;)Z	a	isDominator
+METHOD	r	(LcI;LbT;Z)Z	a	removeEmptyBlock
+METHOD	r	(LcI;)V	b	removeEmptyBlocks
+METHOD	r	(LcI;)V	c	removeGotos
+METHOD	r	(LcI;)V	d	incorporateValueReturns
+METHOD	r	(LcI;)V	e	mergeBasicBlocks
+CLASS	s	de/fernflower/modules/decompiler/sforms/SSAUConstructorSparseEx
+METHOD	s	()Las;	a	getSsuversions
+METHOD	s	(LS;Lbn;)V	a	splitVariables
+METHOD	s	(LaJ;[LbZ;Lca;Z)V	a	processExprent
+METHOD	s	(LbZ;LbZ;)LbZ;	a	mergeMaps
+METHOD	s	(LbZ;Ljava/lang/Integer;Ljava/lang/Integer;)V	a	setCurrentVar
+METHOD	s	(Lbn;LS;)LbZ;	a	createFirstMap
+METHOD	s	(Lca;)Ljava/lang/Integer;	a	getFirstProtectedRange
+METHOD	s	(Lca;Lq;Ldd;)V	a	setCatchMaps
+METHOD	s	(Lde;)LbZ;	a	getLiveVarVersionsMap
+METHOD	s	(Lde;LbZ;)V	a	varMapToGraph
+METHOD	s	(Lde;LcJ;Lca;)V	a	createOrUpdatePhiNode
+METHOD	s	(Ljava/lang/Integer;Lca;)Ljava/lang/Integer;	a	getNextFreeVersion
+METHOD	s	(Ljava/lang/String;Ljava/lang/String;Lq;Ljava/lang/String;)LbZ;	a	getFilteredOutMap
+METHOD	s	(Lq;Ljava/util/HashSet;Z)V	a	ssaStatements
+METHOD	s	()Ljava/util/HashMap;	b	getMapVersionFirstRange
+METHOD	s	(LbZ;LbZ;)Z	b	mapsEqual
+METHOD	s	()Ljava/util/HashMap;	c	getMapFieldVars
+FIELD	s	Ljava/util/HashMap;	a	inVarVersions
+FIELD	s	Ljava/util/HashMap;	b	outVarVersions
+FIELD	s	Ljava/util/HashMap;	c	outNegVarVersions
+FIELD	s	Ljava/util/HashMap;	d	extraVarVersions
+FIELD	s	Ljava/util/HashMap;	e	phi
+FIELD	s	Ljava/util/HashMap;	f	lastversion
+FIELD	s	Ljava/util/HashMap;	g	mapVersionFirstRange
+FIELD	s	Ljava/util/HashMap;	h	phantomppnodes
+FIELD	s	Ljava/util/HashMap;	i	phantomexitnodes
+FIELD	s	Las;	j	ssuversions
+FIELD	s	Ljava/util/HashMap;	k	mapFieldVars
+FIELD	s	I	l	fieldvarcounter
+FIELD	s	LcM;	m	factory
+CLASS	u	de/fernflower/modules/renamer/PoolInterceptor
+METHOD	u	()Lde/fernflower/main/extern/IIdentifierRenamer;	a	getHelper
+METHOD	u	(Ljava/lang/String;)Ljava/lang/String;	a	getOldName
+METHOD	u	(Ljava/lang/String;Ljava/lang/String;)V	a	getName
+METHOD	u	(Ljava/lang/String;Ljava/lang/String;)V	b	addName
+FIELD	u	Lde/fernflower/main/extern/IIdentifierRenamer;	a	helper
+FIELD	u	Ljava/util/HashMap;	b	mapOldToNewNames
+FIELD	u	Ljava/util/HashMap;	c	mapNewToOldNames
+CLASS	v	de/fernflower/main/rels/ClassWrapper
+METHOD	v	()V	a	init
+METHOD	v	(Ljava/lang/String;Ljava/lang/String;)LcX;	a	getMethodWrapper
+METHOD	v	()LbW;	b	getClassStruct
+METHOD	v	()LcE;	c	getMethods
+METHOD	v	()Ljava/util/HashSet;	d	getHideMembers
+METHOD	v	()LcE;	e	getStaticFieldInitializers
+METHOD	v	()LcE;	f	getDynamicFieldInitializers
+FIELD	v	LbW;	a	classStruct
+FIELD	v	Ljava/util/HashSet;	b	hideMembers
+FIELD	v	LcE;	c	staticFieldInitializers
+FIELD	v	LcE;	d	dynamicFieldInitializers
+FIELD	v	LcE;	e	methods
+CLASS	w	de/fernflower/struct/gen/generics/GenericType
+METHOD	w	()Ljava/util/List;	a	getArguments
+METHOD	w	(Ljava/lang/String;)Ljava/lang/String;	a	getNextType
+METHOD	w	(Ljava/lang/String;Lw;)V	a	parseArgumentsList
+METHOD	w	()Ljava/util/List;	b	getEnclosingClasses
+METHOD	w	(Ljava/lang/String;)V	b	parseSignature
+METHOD	w	()Ljava/util/List;	c	getWildcards
+FIELD	w	I	a	type
+FIELD	w	I	b	arraydim
+FIELD	w	Ljava/lang/String;	c	value
+FIELD	w	Ljava/util/List;	d	enclosingClasses
+FIELD	w	Ljava/util/List;	e	arguments
+FIELD	w	Ljava/util/List;	f	wildcards
+CLASS	x	de/fernflower/main/ClassReference14Processor
+METHOD	x	(LaJ;Lv;LcX;)Z	a	replaceInvocations
+METHOD	x	(LaK;)V	a	processClassReferences
+METHOD	x	(LaK;Ljava/util/HashMap;)V	a	findClassMethod
+METHOD	x	(LaK;Ljava/util/HashMap;Ljava/util/HashSet;)V	a	processClassRec
+METHOD	x	(Lx;LaJ;Lv;LcX;)Z	a	access$0
+METHOD	x	(LaJ;Lv;LcX;)Ljava/lang/String;	b	isClass14Invocation
+FIELD	x	Lao;	a	bodyexprent
+FIELD	x	Lao;	b	handlerexprent
+CLASS	y	de/fernflower/modules/decompiler/decompose/FastExtendedPostdominanceHelper$IReachabilityAction
+METHOD	y	(Lca;Ljava/util/HashMap;)Z	a	action
+CLASS	z	de/fernflower/modules/decompiler/sforms/FlattenStatementsHelper$StackEntry
+FIELD	z	Lh;	a	catchstatement
+FIELD	z	Z	b	state
+FIELD	z	I	c	edgetype
+FIELD	z	Z	d	isFinallyExceptionPath
+FIELD	z	Lca;	e	destination
+FIELD	z	Lca;	f	finallyShortRangeEntry
+FIELD	z	Lca;	g	finallyLongRangeEntry
+FIELD	z	LcF;	h	finallyShortRangeSource
+FIELD	z	LcF;	i	finallyLongRangeSource
