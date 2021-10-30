@@ -3,12 +3,19 @@
  */
 package de.fernflower.struct;
 
+import de.fernflower.main.DecompilerContext;
 import de.fernflower.main.Fernflower;
 import de.fernflower.main.extern.IDecompilatSaver;
 import de.fernflower.struct.lazy.LazyLoader;
 import de.fernflower.struct.lazy.LazyLoader$Link;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
 import java.util.jar.Manifest;
 
 public final class ContextUnit {
@@ -89,18 +96,43 @@ public final class ContextUnit {
                     if (this.type == 1 && "META-INF/MANIFEST.MF".equalsIgnoreCase(stringArray[1])) continue;
                     this.decompilatSaver.copyEntry(stringArray[0], this.archivepath, this.filename, stringArray[1]);
                 }
-                int n = 0;
-                while (n < this.classes.size()) {
-                    StructClass structClass = this.classes.get(n);
-                    String string = this.classentries.get(n);
-                    if ((string = this.decompiledData.getClassEntryName(structClass, string)) != null) {
-                        String string3 = this.decompiledData.getClassContent(structClass);
-                        this.decompilatSaver.saveClassEntry(this.archivepath, this.filename, structClass.qualifiedName, string, string3);
+                final List<Future<?>> futures = new LinkedList<>();
+                final ExecutorService decompileExecutor = Executors.newFixedThreadPool(Integer.parseInt(DecompilerContext.getProperty("thr").toString()));
+                final DecompilerContext rootContext = DecompilerContext.getCurrentContext();
+                for (int i = 0; i < classes.size(); i++) {
+                    StructClass structClass = this.classes.get(i);
+                    String entryName = this.decompiledData.getClassEntryName(structClass, this.classentries.get(i));
+                    if (entryName != null) {
+                        futures.add(decompileExecutor.submit(() -> {
+                            setContext(rootContext);
+                            String content = this.decompiledData.getClassContent(structClass);
+                            this.decompilatSaver.saveClassEntry(this.archivepath, this.filename, structClass.qualifiedName, entryName, content);
+                        }));
                     }
-                    ++n;
+                }
+                decompileExecutor.shutdown();
+
+                for (Future<?> future : futures) {
+                    try {
+                        future.get();
+                    } catch (InterruptedException | ExecutionException e) {
+                        throw new RuntimeException(e);
+                    }
                 }
                 this.decompilatSaver.closeArchive(this.archivepath, this.filename);
             }
+        }
+    }
+
+    public void setContext(DecompilerContext rootContext) {
+        DecompilerContext current = DecompilerContext.getCurrentContext();
+        if (current == null) {
+            current = new DecompilerContext(new HashMap<>(rootContext.properties));
+            current.logger = rootContext.logger;
+            current.structcontext = rootContext.structcontext;
+            current.classprocessor = rootContext.classprocessor;
+            current.poolinterceptor = rootContext.poolinterceptor;
+            DecompilerContext.setCurrentContext(current);
         }
     }
 

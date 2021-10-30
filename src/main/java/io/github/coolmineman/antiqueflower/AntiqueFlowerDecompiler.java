@@ -27,7 +27,7 @@ public class AntiqueFlowerDecompiler {
             if (args != null && args.length > 1) {
 
                 HashMap<String, Object> mapOptions = new HashMap<>();
-                mapOptions.put("threads", Runtime.getRuntime().availableProcessors());
+                mapOptions.put("thr", Runtime.getRuntime().availableProcessors());
 
                 List<String> lstSources = new ArrayList<>();
                 List<String> lstLibraries = new ArrayList<String>();

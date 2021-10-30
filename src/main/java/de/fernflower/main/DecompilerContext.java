@@ -13,16 +13,16 @@ import java.util.HashMap;
 
 public final class DecompilerContext {
     private static ThreadLocal<DecompilerContext> currentContext = new ThreadLocal<>();
-    private HashMap<String, Object> properties = new HashMap<>();
-    private StructContext structcontext;
+    public HashMap<String, Object> properties = new HashMap<>();
+    public StructContext structcontext;
     private ImportCollector impcollector;
     private VarNamesCollector varncollector;
     private CounterContainer countercontainer;
-    private ClassesProcessor classprocessor;
-    private PoolInterceptor poolinterceptor;
-    private IFernflowerLogger logger;
+    public ClassesProcessor classprocessor;
+    public PoolInterceptor poolinterceptor;
+    public IFernflowerLogger logger;
 
-    private DecompilerContext(HashMap<String, Object> hashMap) {
+    public DecompilerContext(HashMap<String, Object> hashMap) {
         this.properties.putAll(hashMap);
     }
 
