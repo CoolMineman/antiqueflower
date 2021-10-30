@@ -10,6 +10,7 @@ import java.io.OutputStreamWriter;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.FileSystem;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
@@ -79,7 +80,9 @@ public class ThreadSafeDecompilationSaver implements IDecompilatSaver, Closeable
     public void createArchive(String path, String archivename, Manifest manifest) {
         try {
             File file = new File(getAbsolutePath(path), archivename);
-            FileSystem f = Util.newJarFileSystem(file.toPath());
+            Path file2 = file.toPath();
+            Files.deleteIfExists(file2);
+            FileSystem f = Util.newJarFileSystem(file2);
             zipMap.put(file.getAbsolutePath(), f);
             if (manifest != null) {
                 Files.createDirectories(f.getPath("META-INF"));
@@ -104,7 +107,12 @@ public class ThreadSafeDecompilationSaver implements IDecompilatSaver, Closeable
         try {
             String filename = new File(getAbsolutePath(path), archivename).getAbsolutePath();
             FileSystem out = zipMap.get(filename);
-            try (BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(Files.newOutputStream(out.getPath(entryName)), StandardCharsets.UTF_8))) {
+            Path p = out.getPath(entryName);
+            Path parent = p.getParent();
+            if (parent != null) {
+                Files.createDirectories(parent);
+            }
+            try (BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(Files.newOutputStream(p), StandardCharsets.UTF_8))) {
                 if (content != null) {
                     writer.write(content);
                 }
