@@ -13,7 +13,7 @@ import java.util.HashMap;
 
 public final class DecompilerContext {
     private static ThreadLocal<DecompilerContext> currentContext = new ThreadLocal<>();
-    private HashMap<String, String> properties = new HashMap<>();
+    private HashMap<String, Object> properties = new HashMap<>();
     private StructContext structcontext;
     private ImportCollector impcollector;
     private VarNamesCollector varncollector;
@@ -22,12 +22,12 @@ public final class DecompilerContext {
     private PoolInterceptor poolinterceptor;
     private IFernflowerLogger logger;
 
-    private DecompilerContext(HashMap<String, String> hashMap) {
+    private DecompilerContext(HashMap<String, Object> hashMap) {
         this.properties.putAll(hashMap);
     }
 
-    public static void initContext(HashMap<String, String> hashMap) {
-        HashMap<String, String> hashMap2 = new HashMap<>();
+    public static void initContext(HashMap<String, Object> hashMap) {
+        HashMap<String, Object> hashMap2 = new HashMap<>();
         hashMap2.put("din", "1");
         hashMap2.put("dc4", "1");
         hashMap2.put("das", "1");
@@ -66,7 +66,7 @@ public final class DecompilerContext {
     }
 
     public static void setProperty(String string, Object object) {
-        DecompilerContext.getCurrentContext().properties.put(string, (String) object);
+        DecompilerContext.getCurrentContext().properties.put(string, object);
     }
 
     public static boolean getOption(String string) {

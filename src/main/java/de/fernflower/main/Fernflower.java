@@ -18,7 +18,7 @@ public final class Fernflower {
     private StructContext structcontext;
     private ClassesProcessor clprocessor;
 
-    public Fernflower(IBytecodeProvider object, IDecompilatSaver iDecompilatSaver, HashMap<String, String> hashMap) {
+    public Fernflower(IBytecodeProvider object, IDecompilatSaver iDecompilatSaver, HashMap<String, Object> hashMap) {
         this.structcontext = new StructContext(iDecompilatSaver, this, new LazyLoader((IBytecodeProvider)object));
         DecompilerContext.initContext(hashMap);
         DecompilerContext.setCountercontainer(new CounterContainer());

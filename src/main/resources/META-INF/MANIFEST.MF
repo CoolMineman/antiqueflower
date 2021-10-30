@@ -1,2 +1,2 @@
 Manifest-Version: 1.0
-Main-Class: de.fernflower.main.decompiler.ConsoleDecompiler
+Main-Class: io.github.coolmineman.antiqueflower.AntiqueFlowerDecompiler
