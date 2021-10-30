@@ -12,8 +12,8 @@ import de.fernflower.struct.StructContext;
 import java.util.HashMap;
 
 public final class DecompilerContext {
-    private static ThreadLocal currentContext = new ThreadLocal();
-    private HashMap properties = new HashMap();
+    private static ThreadLocal<DecompilerContext> currentContext = new ThreadLocal<>();
+    private HashMap<String, String> properties = new HashMap<>();
     private StructContext structcontext;
     private ImportCollector impcollector;
     private VarNamesCollector varncollector;
@@ -22,12 +22,12 @@ public final class DecompilerContext {
     private PoolInterceptor poolinterceptor;
     private IFernflowerLogger logger;
 
-    private DecompilerContext(HashMap hashMap) {
+    private DecompilerContext(HashMap<String, String> hashMap) {
         this.properties.putAll(hashMap);
     }
 
-    public static void initContext(HashMap hashMap) {
-        HashMap<String, String> hashMap2 = new HashMap<String, String>();
+    public static void initContext(HashMap<String, String> hashMap) {
+        HashMap<String, String> hashMap2 = new HashMap<>();
         hashMap2.put("din", "1");
         hashMap2.put("dc4", "1");
         hashMap2.put("das", "1");
@@ -54,7 +54,7 @@ public final class DecompilerContext {
     }
 
     public static DecompilerContext getCurrentContext() {
-        return (DecompilerContext)currentContext.get();
+        return currentContext.get();
     }
 
     public static void setCurrentContext(DecompilerContext decompilerContext) {
@@ -66,7 +66,7 @@ public final class DecompilerContext {
     }
 
     public static void setProperty(String string, Object object) {
-        DecompilerContext.getCurrentContext().properties.put(string, object);
+        DecompilerContext.getCurrentContext().properties.put(string, (String) object);
     }
 
     public static boolean getOption(String string) {
@@ -128,7 +128,7 @@ public final class DecompilerContext {
     public static void setLogger(IFernflowerLogger iFernflowerLogger) {
         Object object;
         DecompilerContext.getCurrentContext().logger = iFernflowerLogger;
-        if ((iFernflowerLogger = DecompilerContext.getCurrentContext().logger) != null && (object = (String)DecompilerContext.getProperty("log")) != null && (object = (Integer)IFernflowerLogger.mapLogLevel.get(((String)object).toUpperCase())) != null) {
+        if ((iFernflowerLogger = DecompilerContext.getCurrentContext().logger) != null && (object = DecompilerContext.getProperty("log")) != null && (object = (Integer)IFernflowerLogger.mapLogLevel.get(((String)object).toUpperCase())) != null) {
             iFernflowerLogger.setSeverity((Integer)object);
         }
     }

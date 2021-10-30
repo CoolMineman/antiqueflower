@@ -47,7 +47,7 @@ public final class ContextUnit {
     }
 
     public final void reload(LazyLoader lazyLoader) {
-        ArrayList<StructClass> arrayList = new ArrayList<StructClass>();
+        ArrayList<StructClass> arrayList = new ArrayList<>();
         for (StructClass structClass : this.classes) {
             String string = structClass.qualifiedName;
             structClass = new StructClass(lazyLoader.getClassStream(string), structClass.isOwn(), lazyLoader);
@@ -69,8 +69,8 @@ public final class ContextUnit {
                 int n = 0;
                 while (n < this.classes.size()) {
                     String string;
-                    StructClass structClass = (StructClass)this.classes.get(n);
-                    String string2 = (String)this.classentries.get(n);
+                    StructClass structClass = this.classes.get(n);
+                    String string2 = this.classentries.get(n);
                     if ((string2 = this.decompiledData.getClassEntryName(structClass, string2)) != null && (string = this.decompiledData.getClassContent(structClass)) != null) {
                         this.decompilatSaver.saveClassFile(this.filename, structClass.qualifiedName, string2, string);
                     }
@@ -91,8 +91,8 @@ public final class ContextUnit {
                 }
                 int n = 0;
                 while (n < this.classes.size()) {
-                    StructClass structClass = (StructClass)this.classes.get(n);
-                    String string = (String)this.classentries.get(n);
+                    StructClass structClass = this.classes.get(n);
+                    String string = this.classentries.get(n);
                     if ((string = this.decompiledData.getClassEntryName(structClass, string)) != null) {
                         String string3 = this.decompiledData.getClassContent(structClass);
                         this.decompilatSaver.saveClassEntry(this.archivepath, this.filename, structClass.qualifiedName, string, string3);
@@ -112,7 +112,7 @@ public final class ContextUnit {
         return this.own;
     }
 
-    public final List getClasses() {
+    public final List<StructClass> getClasses() {
         return this.classes;
     }
 }

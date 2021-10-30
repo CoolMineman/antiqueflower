@@ -18,7 +18,7 @@ public final class Fernflower {
     private StructContext structcontext;
     private ClassesProcessor clprocessor;
 
-    public Fernflower(IBytecodeProvider object, IDecompilatSaver iDecompilatSaver, HashMap hashMap) {
+    public Fernflower(IBytecodeProvider object, IDecompilatSaver iDecompilatSaver, HashMap<String, String> hashMap) {
         this.structcontext = new StructContext(iDecompilatSaver, this, new LazyLoader((IBytecodeProvider)object));
         DecompilerContext.initContext(hashMap);
         DecompilerContext.setCountercontainer(new CounterContainer());
@@ -40,7 +40,7 @@ public final class Fernflower {
         }
         if (DecompilerContext.getOption("ren")) {
             String string2 = structClass.qualifiedName.substring(structClass.qualifiedName.lastIndexOf(47) + 1);
-            return String.valueOf(string.substring(0, string.lastIndexOf(47) + 1)) + (String)string2 + ".java";
+            return String.valueOf(string.substring(0, string.lastIndexOf(47) + 1)) + string2 + ".java";
         }
         return String.valueOf(string.substring(0, string.lastIndexOf(".class"))) + ".java";
     }
